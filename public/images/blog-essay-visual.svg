@@ -1,0 +1,16 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Rustige blogvisual met notities</title>
+  <desc id="desc">Een abstracte tafel met notities, lijnen en zachte kleuren.</desc>
+  <rect width="1200" height="860" rx="64" fill="#DDE6DF"/>
+  <rect x="178" y="128" width="610" height="610" rx="44" fill="#FBF7F1" transform="rotate(-5 178 128)"/>
+  <rect x="492" y="220" width="430" height="444" rx="38" fill="#F4EBDF" transform="rotate(7 492 220)"/>
+  <rect x="255" y="252" width="320" height="28" rx="14" fill="#476150"/>
+  <rect x="248" y="326" width="398" height="18" rx="9" fill="#E8E1D8"/>
+  <rect x="242" y="374" width="336" height="18" rx="9" fill="#E8E1D8"/>
+  <rect x="236" y="422" width="370" height="18" rx="9" fill="#E8E1D8"/>
+  <circle cx="844" cy="196" r="92" fill="#BF6D48"/>
+  <circle cx="844" cy="196" r="50" fill="#F7D8C8"/>
+  <path d="M690 558C744 498 792 503 836 552C876 597 937 612 1012 546" stroke="#231F1A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M682 614C742 650 804 643 868 610C922 582 984 589 1032 628" stroke="#476150" stroke-width="10" stroke-linecap="round"/>
+  <text x="222" y="656" fill="#231F1A" font-family="Palatino Linotype, Book Antiqua, serif" font-size="58">Verdieping, maar pas als je wilt lezen.</text>
+</svg>

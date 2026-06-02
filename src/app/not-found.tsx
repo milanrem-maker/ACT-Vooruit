@@ -10,7 +10,7 @@ export default function NotFound() {
         </h1>
         <p className="mx-auto mt-5 max-w-prose leading-8 text-ink-600">
           Ga terug naar de homepage of neem contact op als je zocht naar
-          informatie over ACT-based coaching of een gratis kennismakingsgesprek.
+          informatie over ACT coaching of een gratis kennismakingsgesprek.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <ButtonLink href="/">Naar home</ButtonLink>

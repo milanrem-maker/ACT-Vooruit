@@ -1,19 +1,8 @@
+import Image from "next/image";
+
 import { CtaBanner } from "@/components/cta-banner";
-import { FaqList } from "@/components/faq-list";
-import { PageHero } from "@/components/page-hero";
-import { ProcessSteps } from "@/components/process-steps";
 import { ButtonLink } from "@/components/ui/button-link";
-import { SectionHeading } from "@/components/ui/section-heading";
-import {
-  faqItems,
-  pageHeroes,
-  painPoints,
-  positioningCards,
-  processSteps,
-  whatActIs,
-  whatActIsNot,
-  whyKennismaking,
-} from "@/content/site-content";
+import { faqItems, homeVisuals, processSteps, whatActIs, whatActIsNot } from "@/content/site-content";
 import { siteConfig } from "@/content/site-config";
 import { createMetadata } from "@/lib/metadata";
 
@@ -23,169 +12,237 @@ export const metadata = createMetadata({
   path: "/",
 });
 
-export default function HomePage() {
-  const hero = pageHeroes.home;
+const trustItems = [
+  "gratis kennismaking",
+  "online",
+  "20-30 minuten",
+  "vrijblijvend",
+  "geen diagnose nodig",
+];
 
+const doelgroepBullets = [
+  "je loopt vast in keuzes of uitstelgedrag",
+  "spanning of twijfel kost veel energie",
+  "je wilt hulp die praktisch en niet te zwaar voelt",
+];
+
+const faqPreview = faqItems.slice(0, 5);
+
+export default function HomePage() {
   return (
     <>
-      <PageHero
-        asideItems={hero.asideItems}
-        asideTitle={hero.asideTitle}
-        description={hero.description}
-        eyebrow={hero.eyebrow}
-        primaryAction={{
-          href: siteConfig.ctas.booking,
-          label: "Plan een gratis kennismaking",
-        }}
-        secondaryAction={{
-          href: siteConfig.ctas.werkwijze,
-          label: "Lees hoe het werkt",
-        }}
-        title={hero.title}
-      />
+      <section className="page-shell pt-8 sm:pt-10">
+        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+          <div className="card-surface flex flex-col justify-center px-6 py-9 sm:px-10 sm:py-12 lg:py-16">
+            <p className="eyebrow mb-5">
+              ACT-based coaching voor studenten en young professionals
+            </p>
+            <h1 className="font-display text-5xl leading-[0.95] text-ink-900 sm:text-6xl lg:text-7xl">
+              Loop je vast in piekeren, uitstellen of keuzestress?
+            </h1>
+            <p className="lede mt-6 max-w-prosewide">
+              ACT Vooruit is een praktische eerste stap voor studenten en young
+              professionals die blijven hangen in onrust, vermijding of
+              prestatiedruk. Geen therapie, maar heldere begeleiding om weer in
+              beweging te komen.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <ButtonLink href={siteConfig.ctas.booking}>
+                Plan een gratis kennismaking
+              </ButtonLink>
+              <ButtonLink href="/voor-wie" variant="secondary">
+                Kijk of dit bij je past
+              </ButtonLink>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-2">
+              {trustItems.map((item) => (
+                <span className="pill" key={item}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
 
-      <section className="page-shell pt-6">
-        <div className="flex flex-wrap gap-3">
-          {siteConfig.trustBadges.map((item) => (
-            <span className="pill" key={item}>
-              {item}
-            </span>
-          ))}
+          <div className="editorial-frame bg-white/90 p-4">
+            <Image
+              alt="Milan Rem, coach bij ACT Vooruit"
+              className="h-full min-h-[28rem] w-full rounded-[1.6rem] object-cover"
+              height={1100}
+              priority
+              src="/images/milan-rem-portrait.png"
+              width={900}
+            />
+          </div>
         </div>
       </section>
 
       <section className="page-shell section-space">
-        <SectionHeading
-          description="Een rustige website moet snel duidelijk maken voor wie de praktijk is, wat je hier wel vindt en waarom een eerste stap laagdrempelig mag zijn."
-          eyebrow="Voor wie ACT Vooruit is"
-          title="Herkenning zonder grootspraak."
-        />
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {positioningCards.map((card) => (
-            <article className="card-surface px-6 py-6 sm:px-8" key={card.title}>
-              <h3 className="font-display text-3xl leading-tight text-ink-900">
-                {card.title}
-              </h3>
-              <p className="mt-4 leading-8 text-ink-600">{card.description}</p>
+        <div className="mb-8 max-w-3xl">
+          <p className="section-kicker">Misschien herken je dit</p>
+          <h2 className="section-title mt-4">Niet alles hoeft eerst groot te zijn.</h2>
+        </div>
+        <div className="grid gap-5 lg:grid-cols-3">
+          {homeVisuals.map((item) => (
+            <article className="editorial-frame bg-white/90 p-3" key={item.title}>
+              <Image
+                alt=""
+                className="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
+                height={860}
+                src={item.image}
+                width={1200}
+              />
+              <div className="px-3 py-5">
+                <h3 className="font-display text-3xl leading-tight text-ink-900">
+                  {item.title}
+                </h3>
+                <p className="mt-3 leading-7 text-ink-600">{item.description}</p>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
       <section className="page-shell pb-16 sm:pb-20">
-        <SectionHeading
-          description="Niet iedereen gebruikt dezelfde woorden voor wat er speelt. Daarom helpt herkenning vaak meer dan diagnoses of zware labels."
-          eyebrow="Waar je misschien in vastloopt"
-          title="Veel voorkomende patronen."
-        />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {painPoints.map((item) => (
-            <article
-              className="card-surface px-6 py-6 text-base leading-8 text-ink-600"
-              key={item}
-            >
-              {item}
-            </article>
-          ))}
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p className="section-kicker">Voor wie</p>
+            <h2 className="section-title mt-4 text-balance">
+              Voor studenten en young professionals die zijn vastgelopen.
+            </h2>
+            <p className="mt-5 max-w-prose text-lg leading-8 text-ink-700">
+              ACT Vooruit is er voor mensen die merken dat piekeren, vermijden,
+              onzekerheid of prestatiedruk te veel ruimte innemen in studie,
+              werk of dagelijks leven.
+            </p>
+            <div className="mt-7">
+              <ButtonLink href="/voor-wie" variant="secondary">
+                Lees voor wie dit is
+              </ButtonLink>
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+            {doelgroepBullets.map((item) => (
+              <p
+                className="rounded-[1.5rem] border border-white/70 bg-white/80 px-5 py-5 leading-7 text-ink-700 shadow-soft"
+                key={item}
+              >
+                {item}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="page-shell pb-16 sm:pb-20">
         <div className="grid gap-5 lg:grid-cols-2">
-          <article className="card-surface px-6 py-6 sm:px-8">
-            <p className="eyebrow mb-4">Wat ACT Vooruit is</p>
-            <h2 className="font-display text-4xl leading-tight text-ink-900">
-              Praktische begeleiding met ACT als basis.
-            </h2>
-            <ul className="mt-6 space-y-4">
+          <article className="card-surface px-6 py-7 sm:px-8">
+            <p className="eyebrow mb-4">Wat je hier wel krijgt</p>
+            <ul className="space-y-3 leading-8 text-ink-700">
               {whatActIs.map((item) => (
-                <li
-                  className="rounded-2xl bg-sand-50 px-4 py-4 leading-8 text-ink-600"
-                  key={item}
-                >
+                <li className="rounded-2xl bg-sand-50 px-4 py-4" key={item}>
                   {item}
                 </li>
               ))}
             </ul>
           </article>
 
-          <article className="card-surface px-6 py-6 sm:px-8">
-            <p className="eyebrow mb-4">Wat ACT Vooruit niet is</p>
-            <h2 className="font-display text-4xl leading-tight text-ink-900">
-              Duidelijk in afbakening.
-            </h2>
-            <ul className="mt-6 space-y-4">
+          <article className="card-surface px-6 py-7 sm:px-8">
+            <p className="eyebrow mb-4">Wat dit niet is</p>
+            <ul className="space-y-3 leading-8 text-ink-700">
               {whatActIsNot.map((item) => (
-                <li
-                  className="rounded-2xl bg-white/90 px-4 py-4 leading-8 text-ink-600"
-                  key={item}
-                >
+                <li className="rounded-2xl bg-white/90 px-4 py-4" key={item}>
                   {item}
                 </li>
               ))}
             </ul>
           </article>
         </div>
+        <p className="mx-auto mt-6 max-w-4xl rounded-[1.5rem] bg-ink-900 px-6 py-5 text-center leading-8 text-white/85">
+          Ik ben geen behandelaar, maar een sparringspartner die helpt om helder
+          te krijgen wat er speelt en wat een logische volgende stap is.
+        </p>
       </section>
 
       <section className="page-shell pb-16 sm:pb-20">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <SectionHeading
-            description="Het proces blijft klein en duidelijk: eerst kennismaken, dan samen beoordelen wat passend is."
-            eyebrow="Zo werkt het"
-            title="Van eerste vraag naar werkbare stappen."
-          />
-          <ButtonLink href="/werkwijze" variant="secondary">
-            Bekijk de volledige werkwijze
-          </ButtonLink>
+        <div className="mb-8 max-w-3xl">
+          <p className="section-kicker">Zo werkt het</p>
+          <h2 className="section-title mt-4">Begin klein en duidelijk.</h2>
         </div>
-        <ProcessSteps steps={processSteps} />
-      </section>
-
-      <section className="page-shell pb-16 sm:pb-20">
-        <SectionHeading
-          description="De kennismaking is bewust geen salesgesprek. Het doel is juist om druk weg te nemen en helder te krijgen of coaching logisch voelt."
-          eyebrow="Waarom eerst kennismaken?"
-          title="Zodat je niet meteen alles hoeft te weten."
-        />
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {whyKennismaking.map((item) => (
-            <article className="card-surface px-6 py-6 sm:px-8" key={item.title}>
+        <div className="grid gap-5 lg:grid-cols-3">
+          {processSteps.slice(0, 3).map((step) => (
+            <article className="card-surface px-6 py-6 sm:px-8" key={step.step}>
+              <p className="eyebrow mb-4">Stap {step.step}</p>
               <h3 className="font-display text-3xl leading-tight text-ink-900">
-                {item.title}
+                {step.title}
               </h3>
-              <p className="mt-4 leading-8 text-ink-600">{item.description}</p>
+              <p className="mt-4 leading-8 text-ink-700">{step.description}</p>
             </article>
           ))}
         </div>
       </section>
 
       <section className="page-shell pb-16 sm:pb-20">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <SectionHeading
-            description="Een paar veelgestelde vragen geven alvast houvast als je nog aan het oriënteren bent."
-            eyebrow="Veelgestelde vragen"
-            title="Twijfels mogen er gewoon zijn."
-          />
+        <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div className="editorial-frame bg-white/90 p-4">
+            <Image
+              alt="Milan Rem"
+              className="aspect-[4/5] w-full rounded-[1.6rem] object-cover"
+              height={1100}
+              src="/images/milan-rem-portrait.png"
+              width={900}
+            />
+          </div>
+          <article>
+            <p className="section-kicker">Waarom ik dit doe</p>
+            <h2 className="mt-4 font-display text-4xl leading-tight text-ink-900 sm:text-5xl">
+              Eerlijk, praktisch en laagdrempelig.
+            </h2>
+            <p className="mt-5 max-w-prose text-lg leading-8 text-ink-700">
+              ACT Vooruit is ook persoonlijk voor mij. Ik weet hoe het is om vast
+              te lopen in piekeren, vermijding en prestatiedruk. Juist daarom wil
+              ik begeleiding bieden die eerlijk, praktisch en laagdrempelig is.
+            </p>
+            <div className="mt-7">
+              <ButtonLink href="/over-mij" variant="secondary">
+                Meer over mij
+              </ButtonLink>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="page-shell pb-16 sm:pb-20">
+        <div className="mb-8 max-w-3xl">
+          <p className="section-kicker">Vragen die vaak eerst spelen</p>
+          <h2 className="section-title mt-4">Twijfel is normaal.</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {faqPreview.map((item) => (
+            <article className="card-surface px-6 py-5" key={item.question}>
+              <h3 className="text-lg font-semibold text-ink-900">{item.question}</h3>
+              <p className="mt-3 leading-7 text-ink-600">{item.answer}</p>
+            </article>
+          ))}
+        </div>
+        <div className="mt-7">
           <ButtonLink href="/faq" variant="secondary">
-            Bekijk alle vragen
+            Lees alle vragen
           </ButtonLink>
         </div>
-        <FaqList items={faqItems.slice(0, 4)} />
       </section>
 
       <CtaBanner
-        description="Je hoeft nog niet zeker te weten of coaching de juiste route is. Een eerste gesprek helpt juist om dat rustig samen te verkennen."
-        eyebrow="Volgende stap"
+        description="Twijfel je of coaching past? Dan is een gratis kennismaking een logische eerste stap. Kort, vrijblijvend en bedoeld om helder te krijgen wat nu passend is."
+        eyebrow="Eerste stap"
         primaryAction={{
           href: siteConfig.ctas.booking,
           label: "Plan een gratis kennismaking",
         }}
         secondaryAction={{
           href: siteConfig.ctas.contact,
-          label: "Neem contact op",
+          label: "Stel eerst een vraag",
         }}
-        title="Zet een eerste stap die laagdrempelig blijft."
+        title="Je hoeft niet eerst helemaal vast te lopen om iets te plannen."
       />
     </>
   );

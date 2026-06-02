@@ -1,0 +1,34 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Abstracte kaart van terugkerende patronen</title>
+  <desc id="desc">Zachte vormen en lijnen die piekeren, vermijden, druk en richting visueel verbinden.</desc>
+  <rect width="1200" height="860" rx="64" fill="#F4EBDF"/>
+  <circle cx="214" cy="190" r="118" fill="#DDE6DF"/>
+  <circle cx="987" cy="170" r="152" fill="#F7D8C8"/>
+  <circle cx="1017" cy="675" r="118" fill="#EADBC5"/>
+  <path d="M176 602C274 486 338 393 465 413C575 430 599 548 710 538C826 528 847 388 1028 336" stroke="#476150" stroke-width="24" stroke-linecap="round"/>
+  <path d="M165 612C268 522 337 493 421 518C502 542 520 636 617 642C743 650 808 503 1009 458" stroke="#BF6D48" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 42"/>
+  <g filter="url(#shadow)">
+    <rect x="122" y="292" width="266" height="158" rx="34" fill="#FBF7F1"/>
+    <text x="162" y="358" fill="#231F1A" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">piekeren</text>
+    <text x="162" y="404" fill="#4A4036" font-family="Avenir Next, Segoe UI, sans-serif" font-size="22">veel denken</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="482" y="170" width="278" height="158" rx="34" fill="#FBF7F1"/>
+    <text x="522" y="236" fill="#231F1A" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">vermijden</text>
+    <text x="522" y="282" fill="#4A4036" font-family="Avenir Next, Segoe UI, sans-serif" font-size="22">even lucht</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="748" y="558" width="300" height="158" rx="34" fill="#231F1A"/>
+    <text x="788" y="624" fill="#FBF7F1" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">richting</text>
+    <text x="788" y="670" fill="#F4EBDF" font-family="Avenir Next, Segoe UI, sans-serif" font-size="22">kleine stap</text>
+  </g>
+  <g opacity="0.55">
+    <circle cx="610" cy="486" r="52" fill="#BF6D48"/>
+    <circle cx="610" cy="486" r="22" fill="#FBF7F1"/>
+  </g>
+  <defs>
+    <filter id="shadow" x="72" y="120" width="1026" height="646" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#433121" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+</svg>

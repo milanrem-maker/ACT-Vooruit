@@ -102,32 +102,38 @@ export function ContactForm() {
         </label>
       </div>
 
-      <label className="block text-sm font-medium text-ink-700">
-        Waar wil je contact over?
-        <select className={fieldClassName} defaultValue="kennismaking" name="topic">
-          <option value="kennismaking">Gratis kennismaking</option>
-          <option value="intake">Intake of vervolgstap</option>
-          <option value="vraag">Eerst een vraag stellen</option>
-        </select>
-      </label>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <label className="block text-sm font-medium text-ink-700">
+          Telefoonnummer (optioneel)
+          <input
+            className={fieldClassName}
+            name="phone"
+            placeholder="Alleen als je liever gebeld wordt"
+            type="tel"
+          />
+        </label>
+
+        <label className="block text-sm font-medium text-ink-700">
+          Voorkeur dagdeel
+          <select className={fieldClassName} defaultValue="" name="preferredDaypart">
+            <option disabled value="">
+              Kies wat ongeveer past
+            </option>
+            <option value="ochtend">Ochtend</option>
+            <option value="middag">Middag</option>
+            <option value="avond">Avond</option>
+            <option value="maakt-niet-uit">Maakt niet uit</option>
+          </select>
+        </label>
+      </div>
 
       <label className="block text-sm font-medium text-ink-700">
         Waar loop je op dit moment vooral in vast?
         <textarea
-          className={`${fieldClassName} min-h-40 resize-y`}
+          className={`${fieldClassName} min-h-32 resize-y`}
           name="message"
-          placeholder="Je hoeft het niet perfect te formuleren. Een korte omschrijving is genoeg."
+          placeholder="Bijvoorbeeld: piekeren, uitstellen, keuzestress of prestatiedruk. Een paar zinnen is genoeg."
           required
-        />
-      </label>
-
-      <label className="block text-sm font-medium text-ink-700">
-        Voorkeur voor contact
-        <input
-          className={fieldClassName}
-          name="preferredContact"
-          placeholder="Bijvoorbeeld online, in Nijmegen of eerst per mail"
-          type="text"
         />
       </label>
 
@@ -149,8 +155,8 @@ export function ContactForm() {
             : "Verstuur bericht"}
         </button>
         <p className="text-sm leading-7 text-ink-600">
-          Alleen bedoeld voor gewone vragen of een eerste stap. Niet voor spoed of
-          crisis.
+          Twijfel je nog? Dat is normaal. Juist daarvoor is een kennismaking
+          bedoeld.
         </p>
       </div>
 

@@ -1,0 +1,26 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Patronen herkennen</title>
+  <desc id="desc">Rustige abstracte illustratie met drie herhalende kaarten en een duidelijke richting.</desc>
+  <rect width="1200" height="860" rx="64" fill="#F4EBDF"/>
+  <circle cx="980" cy="160" r="150" fill="#F7D8C8"/>
+  <circle cx="220" cy="700" r="140" fill="#DDE6DF"/>
+  <g filter="url(#shadow)">
+    <rect x="180" y="188" width="840" height="126" rx="34" fill="#FBF7F1"/>
+    <rect x="180" y="366" width="840" height="126" rx="34" fill="#FBF7F1"/>
+    <rect x="180" y="544" width="840" height="126" rx="34" fill="#231F1A"/>
+  </g>
+  <circle cx="260" cy="251" r="28" fill="#BF6D48"/>
+  <circle cx="260" cy="429" r="28" fill="#BF6D48"/>
+  <circle cx="260" cy="607" r="28" fill="#F4EBDF"/>
+  <text x="326" y="260" fill="#231F1A" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">piekeren</text>
+  <text x="326" y="438" fill="#231F1A" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">vermijden</text>
+  <text x="326" y="616" fill="#FBF7F1" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">richting kiezen</text>
+  <path d="M860 250H930M902 222L930 250L902 278" stroke="#476150" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M860 428H930M902 400L930 428L902 456" stroke="#476150" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M860 606H930M902 578L930 606L902 634" stroke="#F4EBDF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <filter id="shadow" x="130" y="138" width="940" height="582" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#433121" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+</svg>

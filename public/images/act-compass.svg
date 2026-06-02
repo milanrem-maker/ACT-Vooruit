@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" fill="none">
+  <rect width="1200" height="780" rx="48" fill="#F7F1E7"/>
+  <rect x="60" y="60" width="1080" height="660" rx="40" fill="#FFF9F1"/>
+  <circle cx="321" cy="380" r="150" fill="#DDE6DF"/>
+  <circle cx="600" cy="235" r="150" fill="#F2D8C7"/>
+  <circle cx="879" cy="380" r="150" fill="#E9DCCB"/>
+  <circle cx="600" cy="525" r="150" fill="#D9E1D3"/>
+  <path d="M435 313 520 268" stroke="#B66744" stroke-width="18" stroke-linecap="round"/>
+  <path d="M680 268 765 313" stroke="#B66744" stroke-width="18" stroke-linecap="round"/>
+  <path d="M790 470 690 516" stroke="#B66744" stroke-width="18" stroke-linecap="round"/>
+  <path d="M510 516 410 470" stroke="#B66744" stroke-width="18" stroke-linecap="round"/>
+  <path d="m600 150 31 58 65 10-47 45 10 65-59-31-58 31 10-65-48-45 66-10 30-58Z" fill="#B66744"/>
+  <text x="321" y="350" fill="#231F1A" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Ruimte maken</text>
+  <text x="321" y="390" fill="#4A4036" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">voor wat je denkt</text>
+  <text x="321" y="420" fill="#4A4036" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">en voelt</text>
+  <text x="600" y="205" fill="#231F1A" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Patronen zien</text>
+  <text x="600" y="245" fill="#4A4036" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">wat helpt, wat vastzet,</text>
+  <text x="600" y="275" fill="#4A4036" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">wat je steeds herhaalt</text>
+  <text x="879" y="350" fill="#231F1A" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Waarden kiezen</text>
+  <text x="879" y="390" fill="#4A4036" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">wat echt belangrijk</text>
+  <text x="879" y="420" fill="#4A4036" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">voor je is</text>
+  <text x="600" y="495" fill="#231F1A" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">In beweging komen</text>
+  <text x="600" y="535" fill="#4A4036" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">kleine stappen die</text>
+  <text x="600" y="565" fill="#4A4036" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">haalbaar blijven</text>
+</svg>

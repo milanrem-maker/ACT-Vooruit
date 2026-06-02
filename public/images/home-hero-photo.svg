@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1120" fill="none">
+  <rect width="1600" height="1120" fill="#E8D6C1"/>
+  <rect width="1600" height="1120" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1600" height="1120" fill="url(#grain)" opacity=".18"/>
+  <rect x="928" y="140" width="468" height="548" rx="24" fill="#F6EFE5"/>
+  <rect x="956" y="168" width="412" height="492" rx="16" fill="url(#window)"/>
+  <path d="M1162 168v492" stroke="#F3E4D4" stroke-width="8"/>
+  <path d="M956 414h412" stroke="#F3E4D4" stroke-width="8"/>
+  <ellipse cx="1148" cy="878" rx="492" ry="104" fill="#CCB295"/>
+  <ellipse cx="516" cy="914" rx="312" ry="72" fill="#D8C1A8"/>
+  <path d="M190 820c64-126 176-198 324-198 152 0 260 68 324 204H190Z" fill="#687C72"/>
+  <path d="M270 770c48-88 132-138 240-138 112 0 196 54 244 144l-44 44H310l-40-50Z" fill="#B86A47"/>
+  <path d="M356 486c0-128 86-214 210-214 62 0 116 22 156 62 39 39 58 90 58 152v162H356V486Z" fill="#2A241F"/>
+  <path d="M472 684c20 62 52 112 92 144 34 28 70 42 110 42 43 0 82-15 118-48 39-35 68-84 86-146 10-32 14-66 14-100 0-67-19-119-56-156-37-38-88-56-152-56-64 0-117 20-156 62-40 40-60 93-60 158 0 34 2 67 4 100Z" fill="#E3B396"/>
+  <path d="M430 510c12-142 108-232 252-232 76 0 138 24 184 72 47 47 70 108 70 184 0 26-3 50-8 76-38-34-88-52-148-52-82 0-152 28-210 86l-60 60-80-194Z" fill="#3B312B"/>
+  <rect x="188" y="732" width="486" height="116" rx="20" fill="#F4EBDF"/>
+  <rect x="228" y="770" width="230" height="14" rx="7" fill="#DABEA4"/>
+  <rect x="228" y="804" width="176" height="14" rx="7" fill="#DABEA4"/>
+  <rect x="228" y="738" width="118" height="12" rx="6" fill="#6A7B72"/>
+  <path d="M1236 672c34 0 62 30 62 66v116h-238c0-110 76-182 176-182Z" fill="#7B8D84"/>
+  <circle cx="1222" cy="648" r="56" fill="#E7B79A"/>
+  <path d="M1176 618c6-44 32-70 74-70 38 0 68 24 76 66-22-16-46-24-72-24-28 0-54 10-78 28Z" fill="#3E342D"/>
+  <path d="M1330 232c48 68 88 144 106 234" stroke="#D8A784" stroke-width="22" stroke-linecap="round"/>
+  <path d="M1410 236c-14 100-38 182-82 252" stroke="#B96C48" stroke-width="16" stroke-linecap="round"/>
+  <path d="M1428 510c-44 14-88 22-132 20" stroke="#657A70" stroke-width="14" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EDDCC7"/>
+      <stop offset=".48" stop-color="#DAB79A"/>
+      <stop offset="1" stop-color="#C19C80"/>
+    </linearGradient>
+    <linearGradient id="window" x1="1162" y1="168" x2="1162" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8EE"/>
+      <stop offset=".42" stop-color="#F1D7BA"/>
+      <stop offset="1" stop-color="#D1A482"/>
+    </linearGradient>
+    <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.2" fill="#fff"/>
+      <circle cx="84" cy="18" r="1" fill="#fff"/>
+      <circle cx="56" cy="52" r="1.4" fill="#fff"/>
+      <circle cx="102" cy="74" r="1.2" fill="#fff"/>
+      <circle cx="30" cy="96" r="1" fill="#fff"/>
+      <circle cx="72" cy="104" r="1.2" fill="#fff"/>
+    </pattern>
+  </defs>
+</svg>

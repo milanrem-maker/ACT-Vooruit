@@ -1,0 +1,24 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Richting kiezen</title>
+  <desc id="desc">Rustige abstracte illustratie met duidelijke stappen richting waarden.</desc>
+  <rect width="1200" height="860" rx="64" fill="#F7D8C8"/>
+  <circle cx="214" cy="680" r="146" fill="#FBF7F1" opacity="0.85"/>
+  <circle cx="1000" cy="176" r="140" fill="#DDE6DF"/>
+  <g filter="url(#shadow)">
+    <rect x="188" y="214" width="824" height="432" rx="56" fill="#FBF7F1"/>
+  </g>
+  <line x1="304" y1="430" x2="896" y2="430" stroke="#231F1A" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="304" cy="430" r="58" fill="#DDE6DF"/>
+  <circle cx="600" cy="430" r="58" fill="#EADBC5"/>
+  <circle cx="896" cy="430" r="58" fill="#476150"/>
+  <path d="M870 430L890 450L928 408" stroke="#FBF7F1" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="304" y="548" text-anchor="middle" fill="#4A4036" font-family="Avenir Next, Segoe UI, sans-serif" font-size="22">nu</text>
+  <text x="600" y="548" text-anchor="middle" fill="#4A4036" font-family="Avenir Next, Segoe UI, sans-serif" font-size="22">kleine stap</text>
+  <text x="896" y="548" text-anchor="middle" fill="#231F1A" font-family="Avenir Next, Segoe UI, sans-serif" font-size="22">waarde</text>
+  <text x="600" y="326" text-anchor="middle" fill="#231F1A" font-family="Avenir Next, Segoe UI, sans-serif" font-size="36" font-weight="700">richting kiezen</text>
+  <defs>
+    <filter id="shadow" x="138" y="164" width="924" height="532" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#433121" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+</svg>

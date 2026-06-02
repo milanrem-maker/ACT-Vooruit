@@ -28,122 +28,150 @@ export type PricingItem = {
   featured?: boolean;
 };
 
+export type ProgramStep = {
+  label: string;
+  title: string;
+  description: string;
+};
+
 export type FaqItem = {
   question: string;
   answer: string;
 };
 
+export type HomeVisual = {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+};
+
+export type BlogPost = {
+  slug: string;
+  title: string;
+  eyebrow: string;
+  excerpt: string;
+  readingTime: string;
+  paragraphs: string[];
+};
+
+export type SourceLink = {
+  title: string;
+  href: string;
+  description: string;
+};
+
 export const pageHeroes: Record<string, HeroContent> = {
   home: {
-    eyebrow: "ACT-based coaching",
+    eyebrow: "ACT coaching",
     title:
-      "Voor studenten en young professionals die vastlopen in piekeren, vermijding en onzekerheid.",
+      "Voor als je vastloopt in je hoofd, keuzes of patronen.",
     description:
-      "Geen therapie of diagnostiek, maar een praktische en laagdrempelige eerste stap om meer rust in je hoofd te ervaren en weer in beweging te komen.",
-    asideTitle: "Helder vanaf het begin",
+      "Praktische begeleiding met ACT als basis. Voor studenten en young professionals die merken dat piekeren, vermijden, onzekerheid of prestatiedruk te veel ruimte innemen.",
+    asideTitle: "Hoe ik werk",
     asideItems: [
-      "Laagdrempelig en praktisch",
-      "Gelijkwaardig en veilig",
-      "ACT als basis, zonder zweverigheid",
-      "Gratis kennismaking als eerste stap",
+      "Gelijkwaardig contact",
+      "Nuchter en zorgvuldig",
+      "Duidelijke grenzen",
+      "Kleine stappen die passen",
     ],
   },
   voorWie: {
     eyebrow: "Voor wie",
-    title: "Voor mensen die merken dat ze vastlopen, maar niet altijd weten welke hulp past.",
+    title: "Voor wie ACT Vooruit bedoeld is",
     description:
-      "ACT Vooruit richt zich op studenten en young professionals die veel piekeren, vermijden of twijfelen, en die een veilige en praktische eerste stap zoeken.",
+      "Voor studenten en young professionals die merken dat piekeren, vermijden, onzekerheid of prestatiedruk te veel ruimte innemen.",
     asideTitle: "Herkenbare twijfels",
     asideItems: [
-      "‘Zo erg is het toch niet?’",
-      "‘Misschien moet ik dit gewoon zelf oplossen.’",
-      "‘Ik weet niet of ik therapie nodig heb.’",
-      "‘Ik wil eerst rustig verkennen wat past.’",
+      "Heb ik een diagnose nodig?",
+      "Is dit therapie?",
+      "Past dit bij mijn situatie?",
+      "Kan ik eerst kennismaken?",
     ],
   },
   werkwijze: {
     eyebrow: "Werkwijze",
-    title: "Een duidelijk proces, zonder druk om meteen een groot traject te starten.",
+    title: "Zo werkt coaching bij ACT Vooruit",
     description:
-      "We beginnen klein en helder: eerst kennismaken, daarna samen bekijken wat passend is. Praktische begeleiding en veiligheid staan steeds voorop.",
+      "Heldere stappen, zonder onduidelijk traject. We beginnen klein en kijken eerst of coaching past.",
     asideTitle: "Wat je kunt verwachten",
     asideItems: [
-      "Concrete stappen",
-      "Ruimte om vragen te stellen",
-      "Eerlijke afbakening",
-      "Regelmatige evaluatie",
+      "Gratis kennismaking",
+      "Intake als het passend voelt",
+      "1-op-1 sessies op locatie",
+      "Regelmatig evalueren",
     ],
   },
   tarieven: {
     eyebrow: "Tarieven",
-    title: "Transparant, rustig en zonder verkooppraat.",
+    title: "Tarieven en instappen",
     description:
-      "Je hoeft niet meteen een volledig traject vast te leggen. Eerst kennismaken kan altijd vrijblijvend, zodat je rustig kunt voelen of dit past.",
-    asideTitle: "Belangrijk om te weten",
+      "Duidelijk, zonder kleine lettertjes. Je hoeft niet meteen een heel traject vast te leggen.",
+    asideTitle: "Instappen",
     asideItems: [
-      "Kennismaking is gratis",
-      "Geen verplicht traject",
-      "Studentvriendelijke opties mogelijk",
-      "Heldere prijzen zonder verrassingen",
+      "Gratis online kennismaking",
+      "Studententarief beschikbaar",
+      "Losse sessies mogelijk",
+      "Zakelijk op aanvraag",
     ],
   },
   overMij: {
     eyebrow: "Over mij",
-    title: "Menselijke, praktische begeleiding met oog voor grenzen.",
+    title: "Over mij",
     description:
-      "Ik werk vanuit betrokkenheid, structuur en ACT als basis. Niet als behandelaar, maar als sparringspartner die helpt om patronen helder te krijgen en stap voor stap verder te komen.",
-    asideTitle: "Waar ik op let",
+      "Ik bied begeleiding die praktisch, eerlijk en menselijk voelt, juist omdat ik weet hoe het is om vast te lopen in piekeren, vermijding en prestatiedruk.",
+    asideTitle: "Mijn stijl",
     asideItems: [
-      "Rust en duidelijkheid",
-      "Laagdrempelig contact",
-      "Passendheid en veiligheid",
-      "Doen wat voor jou belangrijk is",
+      "Gelijkwaardig",
+      "Oprecht",
+      "Praktisch",
+      "Duidelijk over grenzen",
     ],
   },
   faq: {
     eyebrow: "FAQ",
-    title: "Vragen die vaak spelen voordat iemand een eerste stap zet.",
+    title: "Veelgestelde vragen",
     description:
-      "Juist als je twijfelt of coaching passend is, helpt het om helder te weten wat je wel en niet kunt verwachten.",
-    asideTitle: "Veelvoorkomende thema's",
+      "Twijfels zijn logisch. Hier vind je antwoorden op de vragen die vaak eerst spelen.",
+    asideTitle: "Kort antwoord",
     asideItems: [
-      "Diagnose of geen diagnose",
-      "Coaching versus therapie",
-      "Kosten en trajectvorm",
-      "Online of fysiek",
+      "Geen diagnose nodig",
+      "Geen therapie of behandeling",
+      "ACT wordt praktisch gebruikt",
+      "Online kennismaken, fysiek werken",
     ],
   },
   contact: {
     eyebrow: "Contact",
-    title: "Oriënterend contact is welkom, ook als je nog niet precies weet wat je nodig hebt.",
+    title: "Contact opnemen",
     description:
-      "Je mag laagdrempelig contact opnemen met een vraag, twijfel of verzoek voor een gratis kennismakingsgesprek. Ik denk graag met je mee over een passende eerste stap.",
+      "Heb je een vraag of twijfel je of coaching past? Een kort bericht is genoeg om te beginnen.",
     asideTitle: "Praktisch",
     asideItems: [
       "Reageertijd meestal binnen 2 werkdagen",
-      "Mail of eerste gesprek mogelijk",
-      "Online en regio Nijmegen",
+      "Kennismaking online",
+      "Sessies fysiek op locatie",
       "Niet bedoeld voor spoed of crisis",
     ],
   },
   kennismaking: {
     eyebrow: "Gratis kennismaking",
-    title: "Een rustige eerste stap om te kijken of coaching op dit moment passend is.",
+    title: "Plan een gratis kennismaking",
     description:
-      "In een gratis kennismaking verkennen we kort je vraag, je situatie en of ACT Vooruit een goede match is. Veiligheid en passendheid zijn daarbij altijd leidend.",
-    asideTitle: "Waarvoor dit gesprek bedoeld is",
+      "Een kort en vrijblijvend gesprek om te kijken of coaching past. Je hoeft nog niets zeker te weten.",
+    asideTitle: "In het kort",
     asideItems: [
-      "Even landen en je vraag verkennen",
-      "Uitleg krijgen over de werkwijze",
-      "Kijken of coaching past",
-      "Ruimte voor vragen en twijfel",
+      "Online",
+      "20 tot 30 minuten",
+      "Vrijblijvend",
+      "Geen diagnose nodig",
     ],
   },
   veiligheid: {
     eyebrow: "Veiligheid & grenzen",
     title: "Coaching is niet in elke situatie de juiste eerste stap.",
     description:
-      "Juist daarom is het belangrijk om helder te zijn over wanneer ACT-based coaching passend kan zijn, en wanneer andere hulp logischer of veiliger is.",
+      "Juist daarom is het belangrijk om helder te zijn over wanneer ACT coaching passend kan zijn, en wanneer andere hulp logischer of veiliger is.",
     asideTitle: "De lijn blijft helder",
     asideItems: [
       "Geen behandeling of diagnostiek",
@@ -184,56 +212,79 @@ export const positioningCards = [
   {
     title: "Voor studenten en young professionals",
     description:
-      "Voor mensen die veel nadenken, uitstellen of vastlopen in keuzes, studie, werk of sociale druk.",
+      "Voor als studie, werk, keuzes of verwachtingen groter voelen dan je aan de buitenkant laat zien.",
   },
   {
-    title: "ACT als praktische basis",
+    title: "ACT zonder zweverigheid",
     description:
-      "Geen zware theorie, maar oefenen met wat je denkt, voelt en belangrijk vindt in het dagelijks leven.",
+      "We kijken naar gedachten, gevoelens en gedrag, maar altijd gekoppeld aan je gewone leven.",
   },
   {
-    title: "Rustige eerste stap",
+    title: "Eerlijk en realistisch",
     description:
-      "Eerst kennismaken, dan pas samen beslissen of coaching nu passend en helpend is.",
+      "Als coaching niet past, zeg ik dat. Als het wel past, maken we het klein en haalbaar.",
+  },
+];
+
+export const homeVisuals: HomeVisual[] = [
+  {
+    title: "Je hoofd staat moeilijk uit",
+    description: "Je blijft nadenken, twijfelen of analyseren, ook als je rust nodig hebt.",
+    image: "/images/session-notes.svg",
+    href: "/voor-wie",
+  },
+  {
+    title: "Uitstellen geeft even lucht",
+    description: "Je schuift dingen voor je uit, maar de druk wordt daarna groter.",
+    image: "/images/home-pattern-map.svg",
+    href: "/voor-wie",
+  },
+  {
+    title: "Je wilt wel iets veranderen",
+    description: "Geen zware hulp, wel een eerste stap die praktisch en duidelijk voelt.",
+    image: "/images/home-hero-photo.svg",
+    href: "/werkwijze",
   },
 ];
 
 export const painPoints = [
-  "Je piekert veel en blijft daardoor hangen in dezelfde gedachten.",
-  "Je stelt belangrijke dingen uit omdat het te groot of te spannend voelt.",
-  "Je vermijdt gesprekken, keuzes of situaties waar je tegenop ziet.",
-  "Je voelt veel prestatiedruk rondom studie, werk of verwachtingen van anderen.",
-  "Je twijfelt voortdurend aan jezelf en weet niet goed waar je moet beginnen.",
-  "Je wilt wel vooruit, maar je hoofd en gedrag werken niet altijd mee.",
+  "Veel piekeren of overdenken",
+  "Uitstellen of vermijden",
+  "Moeite met keuzes maken",
+  "Prestatiedruk",
+  "Spanning en onrust",
+  "Weinig rust in je hoofd",
+  "Onzekerheid",
+  "Vastlopen in studie of werk",
 ];
 
 export const whatActIs = [
-  "Een praktische vorm van coaching die helpt om patronen te herkennen en ermee te oefenen.",
-  "Een manier om anders om te gaan met lastige gedachten en gevoelens, zonder ze eerst helemaal weg te hoeven krijgen.",
-  "Begeleiding richting kleine, haalbare stappen die passen bij wat voor jou belangrijk is.",
+  "Je herkent wat je vastzet: piekeren, vermijden, uitstellen of perfectionisme.",
+  "Je oefent met lastige gedachten en gevoelens, zonder er de hele dag door gestuurd te worden.",
+  "Je zet kleine stappen richting wat jij belangrijk vindt in studie, werk of dagelijks leven.",
 ];
 
 export const whatActIsNot = [
   "Geen therapie, behandeling of diagnostiek.",
-  "Geen snelle fix of traject waarin je meteen alles moet weten of kunnen.",
-  "Geen zweverige aanpak, maar een concrete manier van kijken, oefenen en evalueren.",
+  "Geen vage beloftes of snelle fix.",
+  "Geen traject zonder duidelijk doel.",
 ];
 
 export const whyKennismaking = [
   {
-    title: "Je hoeft het nog niet zeker te weten",
+    title: "Vrijblijvend",
     description:
-      "Juist als je twijfelt of coaching bij je past, is een korte en vrijblijvende kennismaking vaak een fijne eerste stap.",
+      "Een kennismaking is bedoeld om rustig te verkennen of coaching past. Je hoeft nog niets te beslissen.",
   },
   {
-    title: "We bekijken samen de match",
+    title: "Duidelijk",
     description:
-      "Je krijgt ruimte om je vraag te delen en ik leg uit hoe ik werk, zodat je beter kunt inschatten of dit bij je past.",
+      "Je hoort hoe de werkwijze eruitziet en krijgt ruimte om kort te vertellen wat er speelt.",
   },
   {
-    title: "Veiligheid blijft leidend",
+    title: "Zorgvuldig",
     description:
-      "Als coaching nu niet de juiste route lijkt, bespreek ik dat eerlijk met je en denk ik mee over wat logischer is.",
+      "Als coaching niet passend is, wordt dat eerlijk besproken en kijken we wat logischer is.",
   },
 ];
 
@@ -241,32 +292,47 @@ export const doelgroepSituaties = [
   {
     title: "Studie en keuzes",
     description:
-      "Je schuift opdrachten of keuzes voor je uit, omdat je bang bent om de verkeerde richting te kiezen of te falen.",
+      "Opdrachten, deadlines of studiekeuzes blijven hangen. Je weet ergens wel wat moet, maar komt moeilijk in beweging.",
   },
   {
     title: "Werk en druk",
     description:
-      "Je wilt het goed doen op werk, maar merkt dat spanning, twijfel of perfectionisme steeds meer ruimte innemen.",
+      "Je wilt het goed doen op stage, bijbaan of werk. Tegelijk kosten spanning, twijfel of perfectionisme steeds meer energie.",
   },
   {
     title: "Dagelijks leven",
     description:
-      "Je hoofd staat vaak aan. Daardoor kom je minder toe aan rust, contact, herstel of de dingen die je belangrijk vindt.",
+      "Je hoofd staat vaak aan. Rust, contact of dingen die belangrijk voor je zijn schuiven daardoor naar de achtergrond.",
+  },
+];
+
+export const supportSources: SourceLink[] = [
+  {
+    title: "RIVM en Trimbos monitoren studentenwelzijn",
+    href: "https://www.rivm.nl/publicaties/monitor-mentale-gezondheid-en-middelengebruik-studenten-hbo-en-wo-2025",
+    description:
+      "De Monitor 2025 laat zien dat een aanzienlijk deel van hbo- en wo-studenten stress, prestatiedruk, eenzaamheid of angst- en depressiegevoelens ervaart.",
+  },
+  {
+    title: "Jongeren ervaren vaak stress",
+    href: "https://www.rivm.nl/gezondheidsonderzoek-covid-19/kwartaalonderzoek-jongeren/resultaten-eerdere-metingen/meting-15-mentale-gezondheid",
+    description:
+      "In het RIVM-kwartaalonderzoek van maart 2025 gaf 46% van de jongeren aan zich in de vier weken ervoor vaak gestrest te voelen.",
   },
 ];
 
 export const fitCriteria = [
-  "Je hebt een duidelijke coachvraag of merkt dat je op een concreet thema vastloopt.",
-  "Je functioneert voldoende in je dagelijks leven om afspraken te maken en ermee te oefenen.",
-  "Je zoekt praktische begeleiding en staat open voor kleine stappen tussen sessies door.",
-  "Je begrijpt dat coaching iets anders is dan behandeling of diagnostiek.",
+  "Je hebt geen crisis, maar merkt wel dat je vastloopt.",
+  "Je hebt genoeg ruimte om met coaching aan de slag te gaan.",
+  "Je wilt patronen herkennen en oefenen met kleine stappen.",
+  "Je zoekt een eerste stap zonder meteen een behandeltraject.",
 ];
 
 export const notFitCriteria = [
-  "Er is sprake van suïcidaliteit of concrete zelfbeschadiging.",
-  "Je zit in een acute crisis of ervaart ernstige ontregeling.",
-  "Psychose, hallucinaties of trauma staan sterk op de voorgrond.",
-  "Verslaving of agressieproblematiek vraagt nu eerst om andere hulp.",
+  "Er is sprake van acute crisis of onveiligheid.",
+  "Je hebt nu intensieve behandeling nodig.",
+  "Trauma, verslaving of ernstige ontregeling staat op de voorgrond.",
+  "Er is sprake van psychose, hallucinaties of concrete zelfbeschadiging.",
 ];
 
 export const processSteps: ProcessStep[] = [
@@ -275,138 +341,131 @@ export const processSteps: ProcessStep[] = [
     title: "Gratis kennismaking",
     duration: "20 tot 30 minuten",
     description:
-      "We verkennen kort je vraag, waar je in vastloopt en wat je zoekt in begeleiding.",
+      "Een eerste online gesprek om te verkennen waar je in vastloopt, wat je zoekt en of ACT Vooruit daarbij past.",
     expectation:
-      "Je krijgt helderheid over mijn werkwijze en we kijken samen of coaching op dit moment passend lijkt.",
+      "Vrijblijvend, kort en zonder verplichting om door te gaan.",
   },
   {
     step: "2",
     title: "Intake",
     duration: "60 minuten",
     description:
-      "Als het passend voelt, brengen we je hulpvraag, context, patronen en doelen rustiger in kaart.",
+      "In de intake maken we je hulpvraag scherper en kijken we naar je situatie, impact, doelen en verwachtingen.",
     expectation:
-      "Je krijgt meer structuur in wat er speelt en we spreken af waar we praktisch mee aan de slag gaan.",
+      "Daarna bepalen we samen waar we praktisch mee aan de slag gaan.",
   },
   {
     step: "3",
-    title: "1-op-1 sessies",
+    title: "Sessies",
     duration: "45 tot 60 minuten per sessie",
     description:
-      "In de sessies kijken we naar terugkerende patronen, oefenen we met nieuwe reacties en vertalen we inzichten naar het dagelijks leven.",
+      "Je werkt aan inzicht, omgaan met lastige gedachten en gevoelens, en stappen richting wat belangrijk voor je is.",
     expectation:
-      "Je werkt stap voor stap aan meer rust, richting en beweging op een manier die haalbaar blijft.",
+      "We houden het concreet en koppelen steeds terug naar jouw dagelijks leven.",
   },
   {
     step: "4",
-    title: "Evaluatie en afronding",
+    title: "Evaluatie",
     duration: "kort evaluatiemoment of losse eindsessie",
     description:
-      "We bespreken wat helpend was, waar je nu staat en of afronden, voortzetten of doorverwijzen logisch is.",
+      "We kijken regelmatig of het nog past, wat werkt en wat eventueel aangepast moet worden.",
     expectation:
-      "Het traject blijft overzichtelijk en we houden steeds oog voor wat nu echt passend is.",
+      "Zo blijft coaching overzichtelijk en doelgericht.",
   },
 ];
 
 export const actPrinciples = [
   {
-    title: "Ruimte maken voor wat je voelt",
+    title: "Gedachten niet alles laten bepalen",
     description:
-      "Niet alles hoeft eerst weg. Vaak helpt het al om anders te leren omgaan met spanning, onzekerheid of lastige gedachten.",
+      "Je leert merken wanneer piekeren of twijfel de leiding neemt, en oefent met anders reageren.",
   },
   {
     title: "Patronen leren herkennen",
     description:
-      "Samen kijken we naar piekeren, vermijden, perfectionisme of uitstellen: wat gebeurt er precies, en wat houdt het in stand?",
+      "We kijken concreet naar uitstellen, vermijden, perfectionisme of terugtrekken: wat gebeurt er en wat houdt het in stand?",
   },
   {
-    title: "Bewegen richting waarden",
+    title: "Stappen richting wat belangrijk is",
     description:
-      "We richten ons niet alleen op klachten, maar ook op wat jij belangrijk vindt en hoe je daar stap voor stap meer naar kunt handelen.",
+      "Niet alles hoeft eerst opgelost te zijn. Je oefent met kleine stappen die passen bij jouw doelen en waarden.",
   },
 ];
 
 export const sessionExpectations = [
-  "Heldere gesprekken zonder overbodig vakjargon.",
-  "Concrete oefeningen of reflectievragen als dat helpend is.",
-  "Regelmatig terugkoppelen naar jouw doelen en waarden.",
-  "Ruimte om tempo, grenzen en passendheid steeds samen te bespreken.",
+  "Spiegelen: samen scherper krijgen wat er gebeurt.",
+  "Structureren: overzicht maken als het rommelig voelt.",
+  "Oefenen: kleine stappen uitproberen tussen sessies.",
+  "Evalueren: checken wat werkt en wat bijgesteld moet worden.",
 ];
 
 export const pricingItems: PricingItem[] = [
   {
-    name: "Gratis kennismakingsgesprek",
+    name: "Gratis kennismaking",
     price: "Gratis",
-    duration: "20 tot 30 minuten",
+    duration: "25 minuten, online",
     description:
-      "Een vrijblijvende eerste stap om je vraag te verkennen en te kijken of coaching past.",
+      "Een online gesprek om kort kennis te maken en te kijken of coaching passend voelt.",
     details: [
-      "Kennismaken en vragen stellen",
-      "Uitleg over werkwijze en passendheid",
+      "Vrijblijvend",
+      "Online",
       "Geen verplicht vervolg",
     ],
     featured: true,
   },
   {
     name: "Intake",
-    price: "€95",
-    duration: "60 minuten",
+    price: "€65 regulier / €45 student",
+    duration: "60 minuten, op locatie",
     description:
-      "Een rustig eerste gesprek waarin we jouw situatie, vraag en doelen samen structureren.",
+      "Een fysiek gesprek waarin we jouw vraag, patronen, doelen en grenzen helder krijgen.",
     details: [
-      "Verhelderen van je coachvraag",
-      "Eerste inschatting van thema's en grenzen",
-      "Praktische richting voor het vervolg",
+      "Coachvraag verhelderen",
+      "Doelen en waarden",
+      "Passend vervolg bepalen",
     ],
   },
   {
     name: "Losse sessie",
-    price: "€95",
-    duration: "60 minuten",
+    price: "€85 regulier / €59 student",
+    duration: "60 minuten, op locatie",
     description:
-      "Voor wie flexibel wil werken aan concrete thema's, zonder direct een groot traject vast te leggen.",
+      "Een fysieke 1-op-1 sessie om concreet te werken aan patronen, keuzes en stappen.",
     details: [
-      "1-op-1 coaching",
-      "Ruimte voor evaluatie per sessie",
-      "Handig als je stap voor stap wilt kijken",
+      "ACT-based coaching",
+      "Praktisch oefenen",
+      "Per sessie te evalueren",
     ],
   },
   {
-    name: "Studententarief",
-    price: "€75",
-    duration: "45 tot 60 minuten",
+    name: "Zakelijk",
+    price: "Op aanvraag",
+    duration: "Afhankelijk van vraag",
     description:
-      "Een toegankelijke optie voor studenten die wel begeleiding zoeken, maar hun kosten overzichtelijk willen houden.",
+      "Voor organisaties, onderwijs of werkgevers die coaching of begeleiding willen inkopen.",
     details: [
-      "Zelfde rustige werkwijze",
-      "Voor studievraagstukken, stress en onzekerheid",
-      "Rustig instapniveau voor studenten",
-    ],
-  },
-  {
-    name: "Trajectvoorbeeld",
-    price: "€425",
-    duration: "5 sessies + evaluatie",
-    description:
-      "Een voorbeeld van hoe een compact traject eruit kan zien als je liever met wat meer houvast werkt.",
-    details: [
-      "Niet verplicht als standaardvorm",
-      "Geschikt bij een afgebakend thema",
-      "Overzichtelijk als compacte route",
+      "Maatwerk",
+      "Heldere afbakening",
+      "Contact voor voorstel",
     ],
   },
 ];
 
 export const pricingNotes = [
-  "Je hoeft niet meteen een traject te kopen om te kunnen starten.",
-  "Een gratis kennismaking helpt juist om eerst te voelen of de match klopt.",
-  "Als coaching niet passend lijkt, bespreken we dat eerlijk en zonder druk.",
+  "Omdat ACT Vooruit zich richt op studenten en young professionals, moet de instap logisch en haalbaar voelen.",
+  "Je begint klein: eerst een gratis online kennismaking, daarna pas een mogelijke intake.",
+  "Je hoeft niet meteen een heel traject te kopen om te kunnen starten.",
 ];
 
 export const aboutIntro = [
-  "ACT Vooruit is bedoeld als een rustige en praktische plek voor studenten en young professionals die merken dat ze vastlopen, maar niet per se meteen zware hulp zoeken.",
-  "Ik werk vanuit ACT als basis: helder kijken naar patronen, oefenen met wat lastig is en stap voor stap bewegen richting wat voor jou belangrijk is.",
-  "Daarbij ben ik geen behandelaar. Juist die afbakening vind ik belangrijk, omdat veiligheid en passendheid voor mij altijd voorop staan.",
+  "ACT Vooruit is voor mij niet alleen professioneel, maar ook persoonlijk. Ik weet uit eigen ervaring hoe lastig het kan zijn als piekeren, vermijden en druk te veel ruimte innemen.",
+  "Juist daarom wil ik begeleiding bieden die laagdrempelig, duidelijk en bruikbaar is. Niet zwaarder maken dan nodig, maar ook niet doen alsof het vanzelf overgaat.",
+];
+
+export const aboutStory = [
+  "Ik heb zelf geworsteld met angst, somberheid en alcoholproblematiek. Therapie heeft mij geholpen, maar ik miste ook praktische begeleiding: iemand die naast me stond en hielp om stappen in het dagelijks leven concreet te maken.",
+  "Daarnaast heb ik cursussen gevolgd in ACT en coaching en lange tijd gewerkt als studentencoach aan de HAN in Nijmegen. Daar begeleidde ik studenten die vastliepen in stress, prestatiedruk, onzekerheid, uitstelgedrag en mentale overbelasting.",
+  "Ik zie mezelf niet als iemand die voor jou de oplossing heeft. Ik ben een sparringspartner: iemand die meedenkt, spiegelt, structuur aanbrengt en helpt om inzicht om te zetten in beweging.",
 ];
 
 export const aboutValues = [
@@ -416,9 +475,9 @@ export const aboutValues = [
       "Geen afstandelijke expertrol, maar een sparringspartner die met je meedenkt en eerlijk terugkoppelt.",
   },
   {
-    title: "Praktische focus",
+    title: "Oprecht en praktisch",
     description:
-      "We vertalen inzichten steeds naar kleine stappen die ook buiten een gesprek bruikbaar zijn.",
+      "We vertalen inzichten naar kleine stappen die ook buiten een gesprek bruikbaar zijn, zonder te doen alsof alles meteen opgelost is.",
   },
   {
     title: "Zorgvuldige grenzen",
@@ -428,23 +487,23 @@ export const aboutValues = [
 ];
 
 export const aboutExpectations = [
-  "Rustige, duidelijke gesprekken zonder opgeblazen beloftes.",
-  "Ruimte voor twijfel, tempo en vragen.",
-  "Aandacht voor wat er concreet speelt in studie, werk en dagelijks leven.",
-  "Een werkwijze die menselijk en professioneel aanvoelt, zonder klinische sfeer.",
+  "Duidelijke gesprekken zonder wollige taal.",
+  "Ruimte voor twijfel, tempo en eerlijke vragen.",
+  "Steeds terug naar studie, werk en dagelijks leven.",
+  "Menselijk contact, met praktische richting.",
 ];
 
 export const kennismakingIncluded = [
-  "Kort bespreken waar je in vastloopt en wat je hoopt te vinden in begeleiding.",
-  "Uitleg over hoe ACT Vooruit werkt en wat coaching wel en niet is.",
-  "Samen inschatten of coaching nu passend lijkt voor jouw situatie.",
-  "Ruimte om praktische vragen te stellen over intake, sessies en tarieven.",
+  "Kort verkennen waar je in vastloopt.",
+  "Kijken wat je zoekt in begeleiding.",
+  "Bespreken of coaching passend is.",
+  "Ruimte voor vragen over werkwijze, tarieven en locatie.",
 ];
 
 export const kennismakingNotIncluded = [
-  "Geen uitgebreide intake of volledig verdiepend trajectgesprek.",
-  "Geen diagnose, behandeling of crisisopvang.",
-  "Geen druk om direct een vervolgafspraak vast te leggen.",
+  "Je hoeft geen diagnose te hebben.",
+  "Je hoeft nog geen volledig verhaal klaar te hebben.",
+  "Je hoeft niet meteen te besluiten om door te gaan.",
 ];
 
 export const kennismakingSteps = [
@@ -483,80 +542,151 @@ export const referralSupport = [
   },
 ];
 
+export const programSteps: ProgramStep[] = [
+  {
+    label: "Start",
+    title: "Gratis online kennismaking",
+    description:
+      "Kort aftasten of jouw vraag past bij coaching en of de manier van werken goed voelt.",
+  },
+  {
+    label: "Intake",
+    title: "Vraag, doelen en context",
+    description:
+      "We brengen in kaart waar je in vastloopt, wat je wilt bereiken en welke patronen nu meespelen.",
+  },
+  {
+    label: "Sessie 1",
+    title: "Doelen, waarden en huidige patronen",
+    description:
+      "We maken scherper wat voor jou belangrijk is en hoe piekeren, vermijden of druk je nu vastzet.",
+  },
+  {
+    label: "Sessie 2 t/m 6",
+    title: "Werksessies",
+    description:
+      "We gaan concreet aan de slag met ACT-oefeningen, reflectie en stappen in je dagelijks leven.",
+  },
+  {
+    label: "Sessie 7",
+    title: "Toepassen en verstevigen",
+    description:
+      "We kijken wat werkt, wat nog kwetsbaar is en hoe je dit buiten de sessies blijft toepassen.",
+  },
+  {
+    label: "Sessie 8",
+    title: "Afronding en evaluatie",
+    description:
+      "We ronden zorgvuldig af, evalueren je ontwikkeling en bespreken wat helpt om verder te gaan.",
+  },
+];
+
 export const faqItems: FaqItem[] = [
   {
     question: "Moet ik een diagnose hebben?",
     answer:
-      "Nee. Je hoeft geen diagnose te hebben om contact op te nemen of om te kijken of coaching passend is. Vaak begint het juist met merken dat je vastloopt en nog niet goed weet wat logisch voelt.",
+      "Nee. Je hoeft geen diagnose te hebben. Vaak begint het juist met merken dat je vastloopt en wilt onderzoeken wat een logische eerste stap is.",
   },
   {
     question: "Is dit therapie?",
     answer:
-      "Nee. ACT Vooruit biedt coaching en geen therapie, behandeling of diagnostiek. Dat betekent ook dat ik eerlijk kijk of jouw hulpvraag binnen coaching past.",
-  },
-  {
-    question: "Wat is ACT eigenlijk?",
-    answer:
-      "ACT staat voor Acceptance and Commitment Therapy. Binnen deze praktijk gebruik ik ACT als praktische basis voor coaching: leren omgaan met lastige gedachten en gevoelens, patronen herkennen en bewegen richting wat belangrijk voor je is.",
+      "Nee. ACT Vooruit biedt coaching, geen therapie, behandeling of diagnostiek. Als jouw vraag beter past bij behandeling, zeg ik dat eerlijk.",
   },
   {
     question: "Is ACT zweverig?",
     answer:
-      "Nee. De insteek hier is juist concreet en nuchter. We gebruiken ACT niet als vaag concept, maar als praktische manier om anders met spanning, twijfel en vermijding om te gaan.",
+      "Niet zoals ik het gebruik. ACT is hier praktisch: patronen herkennen, oefenen met wat lastig is en stappen zetten richting wat belangrijk voor je is.",
   },
   {
-    question: "Hoe weet ik of coaching bij mij past?",
+    question: "Werk je online of fysiek?",
     answer:
-      "Een gratis kennismaking is precies bedoeld om dat te verkennen. We kijken samen naar je vraag, hoe je nu functioneert en of coaching een logische stap lijkt.",
-  },
-  {
-    question: "Wat gebeurt er in een gratis kennismaking?",
-    answer:
-      "We bespreken kort waar je in vastloopt, wat je zoekt en hoe ACT Vooruit werkt. Daarna kun je rustiger beoordelen of je verder wilt.",
-  },
-  {
-    question: "Wat gebeurt er in de intake?",
-    answer:
-      "In de intake nemen we meer tijd om je situatie, patronen en doelen in kaart te brengen. Zo ontstaat er meer helderheid over waar we in sessies praktisch aan gaan werken.",
-  },
-  {
-    question: "Moet ik meteen een heel traject starten?",
-    answer:
-      "Nee. De website is bewust zo ingericht dat je ook klein kunt beginnen. Je hoeft dus niet direct een groot traject vast te leggen om een eerste stap te zetten.",
-  },
-  {
-    question: "Is het online of fysiek?",
-    answer:
-      "Online en in regio Nijmegen kunnen beide passend zijn. Neem gerust contact op als je wilt afstemmen wat in jouw situatie praktisch voelt.",
-  },
-  {
-    question: "Wat kost het?",
-    answer:
-      "De tarieven staan overzichtelijk op de tarievenpagina. Daar zie je ook dat een kennismaking gratis is en dat er ruimte is voor een studentvriendelijke optie.",
-  },
-  {
-    question: "Wanneer verwijs je door?",
-    answer:
-      "Bij acute crisis, suïcidaliteit, psychose, ernstige ontregeling, trauma op de voorgrond of andere situaties waarin coaching niet veilig of passend genoeg is.",
-  },
-  {
-    question: "Wat als ik al bij een psycholoog loop?",
-    answer:
-      "Dat kan soms naast elkaar bestaan, zolang de rolverdeling helder is en coaching daadwerkelijk aanvullend en passend blijft. Bij twijfel bespreken we dit zorgvuldig.",
-  },
-  {
-    question: "Kan coaching naast behandeling?",
-    answer:
-      "Soms wel, maar niet automatisch. Het hangt af van je situatie, je doelen en of coaching op dat moment ondersteunend en overzichtelijk blijft.",
+      "De gratis kennismaking is online. De intake en vervolgsessies zijn fysiek op locatie in regio Nijmegen.",
   },
   {
     question: "Is er een wachtlijst?",
     answer:
-      "Dat hangt af van de actuele beschikbaarheid. Neem gerust contact op, dan hoor je snel wat op dit moment haalbaar is.",
+      "Dat hangt af van de actuele beschikbaarheid. Via de kennismakingsagenda zie je welke momenten openstaan.",
+  },
+  {
+    question: "Past dit bij mijn levensfase?",
+    answer:
+      "ACT Vooruit richt zich juist op studenten en young professionals. Studie, keuzes, eerste werkjaren en prestatiedruk kunnen veel vragen.",
+  },
+  {
+    question: "Moet ik meteen een traject kopen?",
+    answer:
+      "Nee. Je start met een gratis kennismaking. Daarna kun je rustig kijken of een intake of vervolgsessies passend zijn.",
+  },
+  {
+    question: "Wat bespreken we in een kennismaking?",
+    answer:
+      "We bespreken kort waar je in vastloopt, wat je zoekt en hoe coaching werkt. Je hoeft je verhaal nog niet perfect klaar te hebben.",
+  },
+  {
+    question: "Wanneer verwijs je door?",
+    answer:
+      "Bij acute crisis, onveiligheid, ernstige ontregeling, psychose, verslaving of trauma op de voorgrond is andere hulp eerst logischer.",
+  },
+  {
+    question: "Kan coaching naast een psycholoog of behandeling?",
+    answer:
+      "Soms wel, als de rolverdeling helder is en je coachvraag concreet en veilig blijft. Bij twijfel bespreken we dat zorgvuldig.",
+  },
+  {
+    question: "Wat kost het?",
+    answer:
+      "De kennismaking is gratis. De intake en sessies hebben een regulier tarief en studententarief. Je vindt de bedragen op de tarievenpagina.",
+  },
+  {
+    question: "Wat gebeurt er in de intake?",
+    answer:
+      "In de intake brengen we je vraag, situatie en doelen scherper in kaart. Daarna bepalen we waar we praktisch aan werken.",
   },
   {
     question: "Hoe snel kan ik starten?",
     answer:
-      "Meestal begint het met een korte kennismaking. Daarna kijken we samen wat haalbaar en passend is qua tempo en vervolg.",
+      "Dat begint met de gratis kennismaking. Daarna kijken we samen wat haalbaar en passend is qua tempo.",
+  },
+];
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "wat-act-coaching-wel-en-niet-is",
+    eyebrow: "ACT coaching",
+    title: "Wat ACT coaching wel en niet is",
+    excerpt:
+      "Een nuchtere uitleg over ACT coaching, zonder therapietaal of grote beloften.",
+    readingTime: "4 min leestijd",
+    paragraphs: [
+      "ACT staat voor Acceptance and Commitment Therapy. Binnen ACT Vooruit wordt ACT gebruikt als praktische basis voor coaching. Dat betekent: kijken naar gedachten, gevoelens en gedragspatronen zonder meteen te doen alsof alles opgelost moet worden.",
+      "Veel mensen wachten met hulp zoeken omdat ze denken dat hun vraag niet ernstig genoeg is. Tegelijk merken ze dat piekeren, vermijden of prestatiedruk steeds meer invloed krijgt op studie, werk of dagelijks leven. Coaching kan dan een laagdrempelige plek zijn om te onderzoeken wat er gebeurt en welke stap realistisch is.",
+      "ACT coaching is geen behandeling en geen diagnostiek. Als er sprake is van crisis, acute onveiligheid, ernstige ontregeling of klachten die duidelijk behandeling vragen, is andere hulp passender. Die grens is geen afwijzing, maar juist onderdeel van zorgvuldig werken.",
+    ],
+  },
+  {
+    slug: "waarom-uitstellen-niet-altijd-luiheid-is",
+    eyebrow: "Vermijding",
+    title: "Waarom uitstellen niet altijd luiheid is",
+    excerpt:
+      "Uitstellen kan een manier zijn om spanning te vermijden. Dat vraagt om meer dan streng zijn voor jezelf.",
+    readingTime: "5 min leestijd",
+    paragraphs: [
+      "Uitstellen lijkt aan de buitenkant vaak simpel: je doet iets niet, terwijl je weet dat het moet. Van binnen is het meestal ingewikkelder. Een opdracht, keuze of gesprek kan spanning oproepen, en uitstellen geeft dan tijdelijk verlichting.",
+      "Het lastige is dat die verlichting kort duurt. Daarna komt vaak schuldgevoel, meer druk en nog meer twijfel. Daardoor wordt het patroon sterker, ook als je rationeel precies weet wat handig zou zijn.",
+      "In coaching onderzoeken we niet alleen wat je uitstelt, maar ook wat je probeert te vermijden. Van daaruit kun je oefenen met kleinere stappen die niet perfect hoeven te zijn, maar wel beweging geven.",
+    ],
+  },
+  {
+    slug: "wanneer-coaching-passend-is",
+    eyebrow: "Passendheid",
+    title: "Wanneer coaching passend is en wanneer niet",
+    excerpt:
+      "Coaching kan helpend zijn, maar niet in elke situatie. Heldere grenzen maken de eerste stap veiliger.",
+    readingTime: "4 min leestijd",
+    paragraphs: [
+      "Coaching past vooral wanneer je een herkenbare vraag hebt, afspraken kunt nakomen en openstaat voor reflectie of oefenen tussen gesprekken door.",
+      "Dat kan gaan over piekeren, onzekerheid, keuzedruk, prestatiedruk of het gevoel dat je steeds in dezelfde reactie schiet. Het doel is niet om een label te plakken, maar om patronen duidelijker te krijgen.",
+      "Bij acute crisis, suïcidaliteit, psychose, ernstige ontregeling, verslaving of trauma op de voorgrond is coaching niet de juiste eerste stap. Dan is behandeling, huisartsenzorg of crisiszorg logischer en veiliger.",
+    ],
   },
 ];

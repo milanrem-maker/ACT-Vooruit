@@ -11,9 +11,9 @@ import { siteConfig } from "@/content/site-config";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Veiligheid en grenzen",
+  title: "Veiligheid en grenzen | Coaching of andere hulp",
   description:
-    "Lees wanneer ACT-based coaching passend kan zijn en wanneer doorverwijzen of andere hulp logischer en veiliger is.",
+    "Lees wanneer ACT coaching passend kan zijn en wanneer therapie, behandeling, crisiszorg of andere hulp logischer en veiliger is.",
   path: "/veiligheid-of-grenzen",
 });
 
@@ -33,7 +33,7 @@ export default function VeiligheidPage() {
         }}
         secondaryAction={{
           href: siteConfig.ctas.contact,
-          label: "Neem contact op",
+          label: "Stel eerst een vraag",
         }}
         title={hero.title}
       />

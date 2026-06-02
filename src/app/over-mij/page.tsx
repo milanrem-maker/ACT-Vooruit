@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 import { CtaBanner } from "@/components/cta-banner";
-import { PageHero } from "@/components/page-hero";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { ButtonLink } from "@/components/ui/button-link";
 import {
   aboutExpectations,
   aboutIntro,
+  aboutStory,
   aboutValues,
   pageHeroes,
 } from "@/content/site-content";
@@ -11,9 +13,9 @@ import { siteConfig } from "@/content/site-config";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Over mij",
+  title: "Over mij | Gelijkwaardige ACT coaching",
   description:
-    "Lees meer over de rustige, praktische en gelijkwaardige werkwijze achter ACT Vooruit en de duidelijke afbakening tussen coaching en behandeling.",
+    "Lees meer over Milan Rem en de praktische, eerlijke en menselijke werkwijze achter ACT Vooruit.",
   path: "/over-mij",
 });
 
@@ -22,93 +24,117 @@ export default function OverMijPage() {
 
   return (
     <>
-      <PageHero
-        asideItems={hero.asideItems}
-        asideTitle={hero.asideTitle}
-        description={hero.description}
-        eyebrow={hero.eyebrow}
-        primaryAction={{
-          href: siteConfig.ctas.booking,
-          label: "Plan een gratis kennismaking",
-        }}
-        secondaryAction={{
-          href: siteConfig.ctas.contact,
-          label: "Neem contact op",
-        }}
-        title={hero.title}
-      />
+      <section className="page-shell pt-8 sm:pt-10">
+        <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch">
+          <div className="editorial-frame bg-white/90 p-4">
+            <Image
+              alt="Milan Rem, oprichter van ACT Vooruit"
+              className="h-full min-h-[30rem] w-full rounded-[1.6rem] object-cover"
+              height={1100}
+              priority
+              src="/images/milan-rem-portrait.png"
+              width={900}
+            />
+          </div>
+
+          <div className="card-surface flex flex-col justify-center px-6 py-9 sm:px-10 sm:py-12">
+            <p className="eyebrow mb-5">{hero.eyebrow}</p>
+            <h1 className="font-display text-5xl leading-none text-ink-900 sm:text-6xl lg:text-7xl">
+              {hero.title}
+            </h1>
+            <p className="lede mt-6 max-w-prosewide">{hero.description}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <ButtonLink href={siteConfig.ctas.booking}>
+                Plan een gratis kennismaking
+              </ButtonLink>
+              <ButtonLink href="/voor-wie" variant="secondary">
+                Kijk of dit bij je past
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="page-shell section-space">
-        <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
-          <article className="card-surface px-6 py-6 sm:px-8">
-            <SectionHeading
-              eyebrow="Persoonlijke introductie"
-              title="Warm en helder, zonder zware beloftes."
-            />
-            <div className="mt-6 space-y-5">
-              {aboutIntro.map((item) => (
-                <p className="leading-8 text-ink-600" key={item}>
-                  {item}
-                </p>
-              ))}
-            </div>
-          </article>
+        <article className="mx-auto max-w-4xl">
+          <p className="section-kicker">Waarom ik ACT Vooruit ben gestart</p>
+          <h2 className="section-title mt-4 text-balance">
+            Praktische hulp had ik zelf graag eerder gehad.
+          </h2>
+          <div className="mt-7 space-y-5 text-lg leading-8 text-ink-700">
+            {aboutIntro.map((item) => (
+              <p key={item}>{item}</p>
+            ))}
+          </div>
+        </article>
+      </section>
 
-          <article className="card-surface px-6 py-6 sm:px-8">
-            <p className="eyebrow mb-4">Hoe ik werk</p>
-            <h2 className="font-display text-4xl leading-tight text-ink-900">
-              Wat je van mij mag verwachten.
-            </h2>
-            <div className="mt-8 space-y-4">
-              {aboutValues.map((item) => (
-                <div className="rounded-2xl bg-sand-50 px-4 py-4" key={item.title}>
-                  <h3 className="text-lg font-semibold text-ink-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 leading-8 text-ink-600">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </article>
+      <section className="page-shell pb-16 sm:pb-20">
+        <div className="grid gap-5 lg:grid-cols-3">
+          {aboutValues.map((item) => (
+            <article className="card-surface px-6 py-6 sm:px-8" key={item.title}>
+              <p className="eyebrow mb-4">Mijn stijl</p>
+              <h3 className="font-display text-3xl leading-tight text-ink-900">
+                {item.title}
+              </h3>
+              <p className="mt-4 leading-8 text-ink-700">{item.description}</p>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="page-shell pb-16 sm:pb-20">
-        <div className="card-surface px-6 py-6 sm:px-8">
-          <p className="eyebrow mb-4">In de praktijk</p>
-          <h2 className="font-display text-4xl leading-tight text-ink-900">
-            Wat belangrijk blijft in elk contact.
+        <article className="mx-auto max-w-4xl border-y border-ink-100 py-10">
+          <p className="section-kicker">Mijn verhaal</p>
+          <h2 className="mt-4 font-display text-4xl leading-tight text-ink-900 sm:text-5xl">
+            Menselijk, maar wel helder.
           </h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
+          <div className="mt-6 space-y-5 text-lg leading-8 text-ink-700">
+            {aboutStory.map((item) => (
+              <p key={item}>{item}</p>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section className="page-shell pb-16 sm:pb-20">
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <article>
+            <p className="section-kicker">Waarom ACT als basis</p>
+            <h2 className="section-title mt-4 text-balance">
+              Niet alles wegmaken, wel anders leren omgaan.
+            </h2>
+            <p className="mt-5 max-w-prose text-lg leading-8 text-ink-700">
+              ACT helpt niet door moeilijke gedachten of gevoelens weg te maken,
+              maar door er anders mee om te leren gaan. Daardoor ontstaat meer
+              ruimte om te bewegen richting wat voor jou belangrijk is.
+            </p>
+          </article>
+          <div className="grid gap-3 sm:grid-cols-2">
             {aboutExpectations.map((item) => (
-              <div
-                className="rounded-2xl bg-white/90 px-4 py-4 leading-8 text-ink-600"
+              <p
+                className="rounded-[1.5rem] border border-white/70 bg-white/80 px-5 py-5 leading-7 text-ink-700 shadow-soft"
                 key={item}
               >
                 {item}
-              </div>
+              </p>
             ))}
           </div>
-          <p className="mt-8 rounded-3xl border border-ink-100 bg-sand-50 px-5 py-5 text-sm leading-7 text-ink-600">
-            Ik vind het belangrijk dat begeleiding zorgvuldig blijft en niet groter
-            wordt gemaakt dan nodig. Daarom blijft afstemming over tempo,
-            passendheid en grenzen steeds onderdeel van het contact.
-          </p>
         </div>
       </section>
 
       <CtaBanner
-        description="Een eerste gesprek helpt meestal sneller dan nog langer alleen blijven afwegen of je vraag wel ‘groot genoeg’ is."
+        description="Een eerste gesprek helpt om te voelen of de manier van werken past, zonder dat je meteen iets hoeft vast te leggen."
         eyebrow="Verder kijken"
         primaryAction={{
+          href: "/voor-wie",
+          label: "Kijk of dit bij je past",
+        }}
+        secondaryAction={{
           href: siteConfig.ctas.booking,
           label: "Plan een gratis kennismaking",
         }}
-        secondaryAction={{
-          href: "/werkwijze",
-          label: "Lees de werkwijze",
-        }}
-        title="Voel rustig of deze manier van werken bij je past."
+        title="Kijk eerst of dit de juiste toon en route is."
       />
     </>
   );

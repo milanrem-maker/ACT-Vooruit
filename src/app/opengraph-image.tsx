@@ -49,7 +49,7 @@ export default function OpenGraphImage() {
               maxWidth: 980,
             }}
           >
-            ACT-based coaching voor studenten en young professionals.
+            ACT coaching bij piekeren en prestatiedruk.
           </div>
           <div
             style={{
@@ -59,8 +59,8 @@ export default function OpenGraphImage() {
               color: "#5f5549",
             }}
           >
-            Geen therapie of diagnostiek, maar een praktische en laagdrempelige
-            eerste stap richting meer rust, richting en beweging.
+            Geen therapie of diagnose. Gratis online kennismaken, daarna fysiek
+            op locatie in regio Nijmegen.
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export default function OpenGraphImage() {
             flexWrap: "wrap",
           }}
         >
-          {["Praktisch", "Laagdrempelig", "Regio Nijmegen en online"].map(
+          {["Gelijkwaardig", "Oprecht", "Fysiek op locatie"].map(
             (label) => (
               <div
                 key={label}

@@ -4,9 +4,9 @@ import { pageHeroes } from "@/content/site-content";
 import { siteConfig } from "@/content/site-config";
 
 export const metadata = createMetadata({
-  title: "Privacy",
+  title: "Privacy | ACT Vooruit",
   description:
-    "Lees hoe ACT Vooruit zorgvuldig omgaat met contactgegevens, berichten en minimale technische gegevens.",
+    "Lees hoe ACT Vooruit zorgvuldig omgaat met contactgegevens, berichten en minimale technische gegevens bij contact of kennismaking.",
   path: "/privacy",
 });
 
@@ -22,11 +22,11 @@ export default function PrivacyPage() {
         eyebrow={hero.eyebrow}
         primaryAction={{
           href: siteConfig.ctas.contact,
-          label: "Neem contact op",
+          label: "Stel eerst een vraag",
         }}
         secondaryAction={{
           href: siteConfig.ctas.booking,
-          label: "Plan een kennismaking",
+          label: "Plan een gratis kennismaking",
         }}
         title={hero.title}
       />

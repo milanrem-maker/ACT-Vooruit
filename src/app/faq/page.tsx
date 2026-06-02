@@ -6,9 +6,9 @@ import { siteConfig } from "@/content/site-config";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "FAQ",
+  title: "FAQ | ACT coaching, kosten en kennismaking",
   description:
-    "Veelgestelde vragen over ACT Vooruit, coaching versus therapie, ACT, intake, kosten, doorverwijzen en gratis kennismaken.",
+    "Veelgestelde vragen over ACT coaching voor studenten: diagnose, therapie, kosten, gratis online kennismaking, fysieke sessies en doorverwijzen.",
   path: "/faq",
 });
 
@@ -34,19 +34,21 @@ export default function FaqPage() {
       />
 
       <section className="page-shell section-space">
-        <FaqList items={faqItems} />
+        <div className="mx-auto max-w-4xl">
+          <FaqList items={faqItems} />
+        </div>
       </section>
 
       <CtaBanner
-        description="Staat je vraag er niet bij? Dan kun je ook gewoon laagdrempelig contact opnemen. Een korte vraag is genoeg."
-        eyebrow="Nog een vraag?"
+        description="Staat je vraag er niet bij? Stel hem gerust kort. Je hoeft niet eerst precies te weten wat je nodig hebt."
+        eyebrow="Heb je nog een vraag?"
         primaryAction={{
           href: siteConfig.ctas.contact,
-          label: "Neem contact op",
+          label: "Stel eerst een vraag",
         }}
         secondaryAction={{
           href: siteConfig.ctas.booking,
-          label: "Plan een kennismaking",
+          label: "Plan een gratis kennismaking",
         }}
         title="Je hoeft niet eerst alles uitgezocht te hebben."
       />

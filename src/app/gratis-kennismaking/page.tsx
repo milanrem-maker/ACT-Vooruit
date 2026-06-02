@@ -1,24 +1,28 @@
+import { BookingForm } from "@/components/booking-form";
+import { CalBookingEmbed } from "@/components/cal-booking-embed";
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
-import { SectionHeading } from "@/components/ui/section-heading";
 import {
   kennismakingIncluded,
   kennismakingNotIncluded,
-  kennismakingSteps,
   pageHeroes,
 } from "@/content/site-content";
 import { siteConfig } from "@/content/site-config";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Gratis kennismaking",
+  title: "Gratis kennismaking | ACT coaching voor studenten",
   description:
-    "Lees waarvoor een gratis kennismakingsgesprek bij ACT Vooruit bedoeld is, wat je kunt verwachten en wat er juist niet in zit.",
+    "Plan een gratis kennismaking voor ACT coaching bij ACT Vooruit. Kort, online, vrijblijvend en bedoeld om te kijken of coaching past.",
   path: "/gratis-kennismaking",
 });
 
 export default function GratisKennismakingPage() {
   const hero = pageHeroes.kennismaking;
+  const hasCalBooking = Boolean(siteConfig.booking.calComUrl);
+  const availabilityNote = hasCalBooking
+    ? "De gratis kennismaking is online. Vervolgsessies vinden fysiek op locatie plaats. Cal.com blokkeert tijden die al bezet zijn in je gekoppelde agenda."
+    : siteConfig.booking.availabilityNote;
 
   return (
     <>
@@ -28,8 +32,8 @@ export default function GratisKennismakingPage() {
         description={hero.description}
         eyebrow={hero.eyebrow}
         primaryAction={{
-          href: siteConfig.ctas.booking,
-          label: "Plan een gratis kennismaking",
+          href: "#boeken",
+          label: "Kies een moment",
         }}
         secondaryAction={{
           href: siteConfig.ctas.contact,
@@ -41,14 +45,11 @@ export default function GratisKennismakingPage() {
       <section className="page-shell section-space">
         <div className="grid gap-5 lg:grid-cols-2">
           <article className="card-surface px-6 py-6 sm:px-8">
-            <p className="eyebrow mb-4">Wel bedoeld voor</p>
-            <h2 className="font-display text-4xl leading-tight text-ink-900">
-              Een rustige eerste verkenning.
-            </h2>
-            <ul className="mt-6 space-y-4">
+            <p className="eyebrow mb-4">Wat we in dit gesprek doen</p>
+            <ul className="space-y-3">
               {kennismakingIncluded.map((item) => (
                 <li
-                  className="rounded-2xl bg-sand-50 px-4 py-4 leading-8 text-ink-600"
+                  className="rounded-2xl bg-sand-50 px-4 py-4 leading-8 text-ink-700"
                   key={item}
                 >
                   {item}
@@ -58,14 +59,11 @@ export default function GratisKennismakingPage() {
           </article>
 
           <article className="card-surface px-6 py-6 sm:px-8">
-            <p className="eyebrow mb-4">Niet bedoeld voor</p>
-            <h2 className="font-display text-4xl leading-tight text-ink-900">
-              Geen intake of behandeling.
-            </h2>
-            <ul className="mt-6 space-y-4">
+            <p className="eyebrow mb-4">Wat je niet hoeft</p>
+            <ul className="space-y-3">
               {kennismakingNotIncluded.map((item) => (
                 <li
-                  className="rounded-2xl bg-white/90 px-4 py-4 leading-8 text-ink-600"
+                  className="rounded-2xl bg-white/90 px-4 py-4 leading-8 text-ink-700"
                   key={item}
                 >
                   {item}
@@ -76,37 +74,45 @@ export default function GratisKennismakingPage() {
         </div>
       </section>
 
-      <section className="page-shell pb-16 sm:pb-20">
-        <SectionHeading
-          description="Deze opbouw is bewust simpel. Zo weet je vooraf beter waar je aan toe bent."
-          eyebrow="Hoe het gesprek meestal verloopt"
-          title="Drie rustige stappen."
-        />
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {kennismakingSteps.map((item, index) => (
-            <article className="card-surface px-6 py-6 sm:px-8" key={item.title}>
-              <p className="eyebrow mb-3">Stap {index + 1}</p>
-              <h2 className="font-display text-3xl leading-tight text-ink-900">
-                {item.title}
-              </h2>
-              <p className="mt-4 leading-8 text-ink-600">{item.description}</p>
-            </article>
-          ))}
+      <section className="page-shell pb-12 sm:pb-14">
+        <div className="grid gap-3 sm:grid-cols-4">
+          <p className="pill">Duur: {siteConfig.booking.duration}</p>
+          <p className="pill">{siteConfig.booking.location}</p>
+          <p className="pill">Vrijblijvend</p>
+          <p className="pill">Geen diagnose nodig</p>
         </div>
       </section>
 
+      {hasCalBooking ? (
+        <CalBookingEmbed
+          availabilityNote={availabilityNote}
+          calUrl={siteConfig.booking.calComUrl}
+          duration={siteConfig.booking.duration}
+          location={siteConfig.booking.location}
+          sessionLabel={siteConfig.booking.sessionLabel}
+        />
+      ) : (
+        <BookingForm
+          availabilityNote={availabilityNote}
+          duration={siteConfig.booking.duration}
+          location={siteConfig.booking.location}
+          sessionLabel={siteConfig.booking.sessionLabel}
+          slots={siteConfig.booking.slots}
+        />
+      )}
+
       <CtaBanner
-        description="Veiligheid en passendheid blijven leidend. Als coaching niet de juiste route blijkt, bespreken we dat open en zorgvuldig."
+        description="Twijfel je nog? Dat is heel normaal. Juist daarvoor is een kennismaking bedoeld."
         eyebrow="Laagdrempelig starten"
         primaryAction={{
-          href: siteConfig.ctas.booking,
-          label: "Plan een gratis kennismaking",
+          href: siteConfig.ctas.contact,
+          label: "Stel eerst een vraag",
         }}
         secondaryAction={{
           href: "/veiligheid-of-grenzen",
-          label: "Lees over veiligheid",
+          label: "Lees over grenzen",
         }}
-        title="Een eerste gesprek hoeft niet zwaar of groot te voelen."
+        title="Je hoeft nog niets zeker te weten."
       />
     </>
   );

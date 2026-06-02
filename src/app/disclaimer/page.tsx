@@ -4,9 +4,9 @@ import { pageHeroes } from "@/content/site-content";
 import { siteConfig } from "@/content/site-config";
 
 export const metadata = createMetadata({
-  title: "Disclaimer",
+  title: "Disclaimer | Coaching is geen therapie",
   description:
-    "Lees de afbakening van ACT Vooruit: coaching is geen therapie, diagnostiek of crisiszorg en vervangt geen behandeling.",
+    "Lees de afbakening van ACT Vooruit: ACT coaching is geen therapie, diagnostiek, behandeling of crisiszorg.",
   path: "/disclaimer",
 });
 
@@ -22,7 +22,7 @@ export default function DisclaimerPage() {
         eyebrow={hero.eyebrow}
         primaryAction={{
           href: siteConfig.ctas.contact,
-          label: "Neem contact op",
+          label: "Stel eerst een vraag",
         }}
         secondaryAction={{
           href: "/veiligheid-of-grenzen",

@@ -30,7 +30,7 @@ export function PageHero({
       <div className="grid gap-6 lg:grid-cols-[1.5fr_0.9fr]">
         <div className="card-surface px-6 py-8 sm:px-10 sm:py-12">
           <p className="eyebrow mb-5">{eyebrow}</p>
-          <h1 className="font-display text-5xl leading-none text-ink-900 sm:text-6xl lg:text-7xl">
+          <h1 className="font-display text-4xl leading-[0.98] text-ink-900 sm:text-5xl lg:text-6xl">
             <span className="text-balance">{title}</span>
           </h1>
           <p className="lede mt-6 max-w-prosewide text-balance">{description}</p>

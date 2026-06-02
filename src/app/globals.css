@@ -79,11 +79,19 @@ summary::-webkit-details-marker {
   }
 
   .lede {
-    @apply text-base leading-8 text-ink-600 sm:text-lg;
+    @apply text-base leading-8 text-ink-700 sm:text-lg;
   }
 
   .pill {
-    @apply inline-flex items-center rounded-full border border-ink-100 bg-white/70 px-4 py-2 text-sm text-ink-600 backdrop-blur;
+    @apply inline-flex items-center rounded-full border border-ink-100 bg-white/70 px-4 py-2 text-sm text-ink-700 backdrop-blur;
+  }
+
+  .editorial-frame {
+    @apply overflow-hidden rounded-[2rem] border border-white/60 bg-white/80 shadow-soft backdrop-blur;
+  }
+
+  .section-kicker {
+    @apply text-sm font-semibold uppercase tracking-[0.18em] text-sage-700;
   }
 }
 

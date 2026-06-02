@@ -15,15 +15,15 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow mb-4">ACT Vooruit</p>
           <h2 className="font-display text-3xl leading-tight text-ink-900">
-            Rustig, praktisch en duidelijk.
+            Milan Rem.
           </h2>
           <p className="mt-4 max-w-prose text-base leading-8 text-ink-600">
             ACT-based coaching voor studenten en young professionals die
-            vastlopen in piekeren, vermijding, onzekerheid en prestatiedruk.
+            vastlopen in piekeren, vermijding en prestatiedruk.
           </p>
           <p className="mt-4 text-sm leading-7 text-ink-600">
-            Geen therapie, behandeling of diagnostiek. Wel een praktische en
-            veilige eerste stap als coaching past bij jouw situatie.
+            Geen therapie of diagnose. Wel praktische begeleiding, met een
+            gratis online kennismaking als eerste stap.
           </p>
         </div>
 
