@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Tijdelijk proefbeeld blogthema's</title>
+  <desc id="desc">Rustige illustratie van kaarten met thema's zoals piekeren, stress en ACT.</desc>
+  <rect width="1200" height="860" rx="64" fill="#F7F1E7"/>
+  <circle cx="1000" cy="150" r="150" fill="#DDE6DF"/>
+  <circle cx="210" cy="720" r="160" fill="#F2D8C7"/>
+  <rect x="108" y="108" width="984" height="644" rx="52" fill="#FFF9F1"/>
+  <rect x="178" y="190" width="360" height="190" rx="34" fill="#FFFFFF"/>
+  <rect x="618" y="190" width="360" height="190" rx="34" fill="#E9DCCB"/>
+  <rect x="178" y="452" width="360" height="190" rx="34" fill="#DDE6DF"/>
+  <rect x="618" y="452" width="360" height="190" rx="34" fill="#FFFFFF"/>
+  <path d="M236 252h214" stroke="#4A4036" stroke-width="14" stroke-linecap="round"/>
+  <path d="M236 294h156" stroke="#B66744" stroke-width="14" stroke-linecap="round"/>
+  <path d="M676 252h214" stroke="#4A4036" stroke-width="14" stroke-linecap="round"/>
+  <path d="M676 294h142" stroke="#476150" stroke-width="14" stroke-linecap="round"/>
+  <path d="M236 514h214" stroke="#4A4036" stroke-width="14" stroke-linecap="round"/>
+  <path d="M236 556h132" stroke="#B66744" stroke-width="14" stroke-linecap="round"/>
+  <path d="M676 514h214" stroke="#4A4036" stroke-width="14" stroke-linecap="round"/>
+  <path d="M676 556h168" stroke="#476150" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="488" cy="332" r="28" fill="#F2D8C7"/>
+  <circle cx="928" cy="332" r="28" fill="#FFF9F1"/>
+  <circle cx="488" cy="594" r="28" fill="#FFF9F1"/>
+  <circle cx="928" cy="594" r="28" fill="#F2D8C7"/>
+  <path d="M336 706c64-38 135-50 214-36 73 13 138 4 196-28 58-33 119-38 184-16" stroke="#B66744" stroke-width="16" stroke-linecap="round"/>
+  <text x="600" y="804" fill="#4A4036" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Eerste houvast bij herkenbare thema's</text>
+</svg>

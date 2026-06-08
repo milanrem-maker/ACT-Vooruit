@@ -37,14 +37,26 @@ export default function WerkwijzePage() {
           </div>
           <div className="editorial-frame bg-white/90 p-4">
             <Image
-              alt="Notitieboek en werkplek als rustige coaching-context"
+              alt="Tijdelijk proefbeeld van een rustig kennismakingsgesprek"
               className="h-full min-h-[26rem] w-full rounded-[1.6rem] object-cover"
               height={860}
               priority
-              src="/images/session-notes.svg"
+              src="/images/conversation-placeholder.svg"
               width={1200}
             />
           </div>
+        </div>
+      </section>
+
+      <section className="page-shell pt-8">
+        <div className="editorial-frame bg-white/90 p-4">
+          <Image
+            alt="Tijdelijk proefbeeld van Milan in gesprek met iemand"
+            className="aspect-[16/7] w-full rounded-[1.6rem] object-cover"
+            height={700}
+            src="/images/conversation-placeholder.svg"
+            width={1600}
+          />
         </div>
       </section>
 
@@ -52,7 +64,7 @@ export default function WerkwijzePage() {
         <div className="mb-8 max-w-3xl">
           <p className="section-kicker">Stap voor stap</p>
           <h2 className="section-title mt-4 text-balance">
-            Geen onduidelijk traject. Wel heldere stappen.
+            Een duidelijk traject met heldere stappen.
           </h2>
         </div>
         <ol className="grid gap-5 lg:grid-cols-4">
@@ -85,12 +97,13 @@ export default function WerkwijzePage() {
           </article>
           <div className="grid gap-3 sm:grid-cols-2">
             {sessionExpectations.map((item) => (
-              <p
+              <article
                 className="rounded-[1.5rem] border border-white/70 bg-white/80 px-5 py-5 leading-7 text-ink-700 shadow-soft"
-                key={item}
+                key={item.title}
               >
-                {item}
-              </p>
+                <strong className="block text-ink-900">{item.title}</strong>
+                <p className="mt-2">{item.description}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -125,7 +138,7 @@ export default function WerkwijzePage() {
       </section>
 
       <CtaBanner
-        description="Een gratis kennismaking is genoeg om je vraag kort neer te leggen en samen te kijken of coaching logisch is."
+        description="Eerst rustig kennismaken, daarna kijken wat past."
         eyebrow="Volgende stap"
         primaryAction={{
           href: siteConfig.ctas.booking,
@@ -135,7 +148,7 @@ export default function WerkwijzePage() {
           href: "/veiligheid-of-grenzen",
           label: "Lees over grenzen",
         }}
-        title="Begin klein, met overzicht en zonder druk."
+        title="Een duidelijk traject begint met een rustige eerste stap."
       />
     </>
   );

@@ -87,7 +87,7 @@ export default function OverMijPage() {
         <article className="mx-auto max-w-4xl border-y border-ink-100 py-10">
           <p className="section-kicker">Mijn verhaal</p>
           <h2 className="mt-4 font-display text-4xl leading-tight text-ink-900 sm:text-5xl">
-            Menselijk, maar wel helder.
+            Wat ik zelf heb ervaren.
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-8 text-ink-700">
             {aboutStory.map((item) => (
@@ -102,12 +102,12 @@ export default function OverMijPage() {
           <article>
             <p className="section-kicker">Waarom ACT als basis</p>
             <h2 className="section-title mt-4 text-balance">
-              Niet alles wegmaken, wel anders leren omgaan.
+              Heb je de neiging om lastige gevoelens en gedachten te onderdrukken?
             </h2>
             <p className="mt-5 max-w-prose text-lg leading-8 text-ink-700">
-              ACT helpt niet door moeilijke gedachten of gevoelens weg te maken,
-              maar door er anders mee om te leren gaan. Daardoor ontstaat meer
-              ruimte om te bewegen richting wat voor jou belangrijk is.
+              ACT helpt je anders om te leren gaan met moeilijke gedachten of
+              gevoelens. Daardoor ontstaat meer ruimte om te bewegen richting
+              wat voor jou belangrijk is.
             </p>
           </article>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -134,7 +134,7 @@ export default function OverMijPage() {
           href: siteConfig.ctas.booking,
           label: "Plan een gratis kennismaking",
         }}
-        title="Kijk eerst of dit de juiste toon en route is."
+        title="Kijk of dit de juiste route is."
       />
     </>
   );

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Tijdelijk proefbeeld online kennismaking</title>
+  <desc id="desc">Rustige illustratie van een coach achter een laptop tijdens een online kennismakingsgesprek.</desc>
+  <rect width="1200" height="860" rx="64" fill="#F7F1E7"/>
+  <circle cx="990" cy="132" r="150" fill="#DDE6DF"/>
+  <circle cx="190" cy="720" r="170" fill="#F2D8C7"/>
+  <rect x="112" y="118" width="976" height="624" rx="54" fill="#FFF9F1"/>
+  <rect x="156" y="160" width="888" height="392" rx="38" fill="#E9DCCB"/>
+  <path d="M156 198c138 38 246 26 326-36 121 87 272 93 453 18 58 54 94 120 109 198v174H156V198Z" fill="#DDE6DF"/>
+  <rect x="246" y="438" width="708" height="230" rx="34" fill="#FFFFFF"/>
+  <rect x="386" y="488" width="428" height="120" rx="26" fill="#4A4036"/>
+  <rect x="420" y="516" width="360" height="64" rx="16" fill="#F7F1E7"/>
+  <rect x="346" y="630" width="508" height="24" rx="12" fill="#B66744"/>
+  <circle cx="438" cy="294" r="58" fill="#D7A78D"/>
+  <path d="M360 436c20-70 70-112 136-112h12c66 0 116 42 136 112" fill="#476150"/>
+  <path d="M390 280c12-46 50-78 98-78 55 0 96 38 102 90-36-16-73-19-111-8-29 8-58 6-89-4Z" fill="#352D26"/>
+  <rect x="704" y="224" width="210" height="156" rx="30" fill="#FFF9F1"/>
+  <circle cx="808" cy="282" r="32" fill="#D7A78D"/>
+  <path d="M748 354c15-38 43-58 84-58 39 0 68 20 86 58" fill="#B66744"/>
+  <path d="M738 408h184" stroke="#4A4036" stroke-width="12" stroke-linecap="round"/>
+  <path d="M764 452h132" stroke="#4A4036" stroke-width="12" stroke-linecap="round" opacity=".45"/>
+  <rect x="214" y="690" width="772" height="34" rx="17" fill="#EAD9C8"/>
+  <text x="600" y="796" fill="#4A4036" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Online kennismaking</text>
+</svg>

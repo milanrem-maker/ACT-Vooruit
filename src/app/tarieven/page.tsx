@@ -71,7 +71,9 @@ export default function TarievenPage() {
       <section className="page-shell section-space">
         <div className="mb-8 max-w-3xl">
           <p className="section-kicker">Zo kun je starten</p>
-          <h2 className="section-title mt-4">Eerst klein, daarna pas kiezen.</h2>
+          <h2 className="section-title mt-4">
+            Eerst kennismaken, daarna pas kiezen.
+          </h2>
         </div>
         <div className="grid gap-5 lg:grid-cols-3">
           {startOptions.map((item) => (
@@ -165,17 +167,17 @@ export default function TarievenPage() {
       </section>
 
       <CtaBanner
-        description="Twijfel je of dit bij je past? Start dan met een gratis online kennismaking. Daarna hoef je pas verder te kiezen."
-        eyebrow="Twijfel je nog?"
+        description="Misschien twijfel je nog. Dat is heel normaal. Neem gerust contact op."
+        eyebrow="Eerste vraag"
         primaryAction={{
-          href: siteConfig.ctas.booking,
-          label: "Plan een gratis kennismaking",
-        }}
-        secondaryAction={{
           href: siteConfig.ctas.contact,
           label: "Stel eerst een vraag",
         }}
-        title="Je hoeft niet meteen iets vast te leggen om te beginnen."
+        secondaryAction={{
+          href: "/veiligheid-of-grenzen",
+          label: "Lees over grenzen",
+        }}
+        title="Heb je een vraag?"
       />
     </>
   );

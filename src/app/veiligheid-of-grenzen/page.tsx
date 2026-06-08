@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -37,6 +39,19 @@ export default function VeiligheidPage() {
         }}
         title={hero.title}
       />
+
+      <section className="page-shell pt-8 sm:pt-10">
+        <div className="editorial-frame bg-white/90 p-4">
+          <Image
+            alt="Tijdelijk proefbeeld van een rustig gesprek waarin zorgvuldig wordt afgestemd"
+            className="aspect-[16/7] w-full rounded-[1.6rem] object-cover"
+            height={700}
+            priority
+            src="/images/conversation-placeholder.svg"
+            width={1600}
+          />
+        </div>
+      </section>
 
       <section className="page-shell section-space">
         <div className="grid gap-5 lg:grid-cols-2">
@@ -78,9 +93,9 @@ export default function VeiligheidPage() {
 
       <section className="page-shell pb-16 sm:pb-20">
         <SectionHeading
-          description="Duidelijke grenzen zijn niet afstandelijk. Ze helpen juist om zorgvuldig te kijken wat iemand nodig heeft."
-          eyebrow="Wat er dan gebeurt"
-          title="Zo ziet eerlijk afstemmen eruit."
+          description="Duidelijke grenzen zijn niet afstandelijk. Ze helpen juist om zorgvuldig te kijken wat jij nodig hebt."
+          eyebrow="Wat gaan we doen"
+          title="Duidelijke grenzen zijn belangrijk."
         />
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {referralSupport.map((item) => (
@@ -98,7 +113,7 @@ export default function VeiligheidPage() {
       </section>
 
       <CtaBanner
-        description="Twijfel over passendheid hoeft je niet tegen te houden. We kunnen dat juist rustig samen verkennen in een eerste contactmoment."
+        description="Twijfel je of ACT Vooruit bij je past? Geen probleem! We verkennen samen of het jou kan helpen."
         eyebrow="Veilig beginnen"
         primaryAction={{
           href: siteConfig.ctas.booking,
@@ -108,7 +123,7 @@ export default function VeiligheidPage() {
           href: siteConfig.ctas.contact,
           label: "Stel eerst een vraag",
         }}
-        title="Veiligheid en duidelijkheid mogen vanaf het begin voelbaar zijn."
+        title="Veilig beginnen"
       />
     </>
   );

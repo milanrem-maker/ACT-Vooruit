@@ -38,7 +38,7 @@ export default function HomePage() {
               ACT-based coaching voor studenten en young professionals
             </p>
             <h1 className="font-display text-5xl leading-[0.95] text-ink-900 sm:text-6xl lg:text-7xl">
-              Loop je vast in piekeren, uitstellen of keuzestress?
+              Loop je vast?
             </h1>
             <p className="lede mt-6 max-w-prosewide">
               ACT Vooruit is een praktische eerste stap voor studenten en young
@@ -79,7 +79,7 @@ export default function HomePage() {
       <section className="page-shell section-space">
         <div className="mb-8 max-w-3xl">
           <p className="section-kicker">Misschien herken je dit</p>
-          <h2 className="section-title mt-4">Niet alles hoeft eerst groot te zijn.</h2>
+          <h2 className="section-title mt-4">Je zit niet lekker in je vel.</h2>
         </div>
         <div className="grid gap-5 lg:grid-cols-3">
           {homeVisuals.map((item) => (
@@ -107,7 +107,7 @@ export default function HomePage() {
           <div>
             <p className="section-kicker">Voor wie</p>
             <h2 className="section-title mt-4 text-balance">
-              Voor studenten en young professionals die zijn vastgelopen.
+              Voor studenten en professionals die vastlopen.
             </h2>
             <p className="mt-5 max-w-prose text-lg leading-8 text-ink-700">
               ACT Vooruit is er voor mensen die merken dat piekeren, vermijden,
@@ -120,10 +120,10 @@ export default function HomePage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+          <div className="grid gap-4 sm:grid-cols-3">
             {doelgroepBullets.map((item) => (
               <p
-                className="rounded-[1.5rem] border border-white/70 bg-white/80 px-5 py-5 leading-7 text-ink-700 shadow-soft"
+                className="flex min-h-36 items-center rounded-[1.7rem] border border-white/70 bg-white/80 px-6 py-7 text-lg leading-8 text-ink-700 shadow-soft"
                 key={item}
               >
                 {item}
@@ -195,7 +195,7 @@ export default function HomePage() {
           <article>
             <p className="section-kicker">Waarom ik dit doe</p>
             <h2 className="mt-4 font-display text-4xl leading-tight text-ink-900 sm:text-5xl">
-              Eerlijk, praktisch en laagdrempelig.
+              Ik weet hoe lastig het kan zijn.
             </h2>
             <p className="mt-5 max-w-prose text-lg leading-8 text-ink-700">
               ACT Vooruit is ook persoonlijk voor mij. Ik weet hoe het is om vast
@@ -232,17 +232,17 @@ export default function HomePage() {
       </section>
 
       <CtaBanner
-        description="Twijfel je of coaching past? Dan is een gratis kennismaking een logische eerste stap. Kort, vrijblijvend en bedoeld om helder te krijgen wat nu passend is."
+        description="Om helder te krijgen wat jij nu nodig hebt, kun je klein beginnen met een vraag. Misschien twijfel je nog. Dat is heel normaal."
         eyebrow="Eerste stap"
         primaryAction={{
-          href: siteConfig.ctas.booking,
-          label: "Plan een gratis kennismaking",
-        }}
-        secondaryAction={{
           href: siteConfig.ctas.contact,
           label: "Stel eerst een vraag",
         }}
-        title="Je hoeft niet eerst helemaal vast te lopen om iets te plannen."
+        secondaryAction={{
+          href: "/veiligheid-of-grenzen",
+          label: "Lees over grenzen",
+        }}
+        title="Wat er ook speelt, neem gerust contact op."
       />
     </>
   );

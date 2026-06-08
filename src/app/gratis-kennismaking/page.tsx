@@ -102,8 +102,8 @@ export default function GratisKennismakingPage() {
       )}
 
       <CtaBanner
-        description="Twijfel je nog? Dat is heel normaal. Juist daarvoor is een kennismaking bedoeld."
-        eyebrow="Laagdrempelig starten"
+        description="Misschien twijfel je nog. Dat is heel normaal. Neem gerust contact op."
+        eyebrow="Eerste vraag"
         primaryAction={{
           href: siteConfig.ctas.contact,
           label: "Stel eerst een vraag",
@@ -112,7 +112,12 @@ export default function GratisKennismakingPage() {
           href: "/veiligheid-of-grenzen",
           label: "Lees over grenzen",
         }}
-        title="Je hoeft nog niets zeker te weten."
+        size="large"
+        title="Heb je een vraag?"
+        visual={{
+          alt: "Tijdelijk proefbeeld van Milan achter een laptop in een online kennismaking",
+          src: "/images/consult-call-placeholder.svg",
+        }}
       />
     </>
   );

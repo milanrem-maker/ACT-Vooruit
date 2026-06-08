@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { CtaBanner } from "@/components/cta-banner";
 import { blogPosts } from "@/content/site-content";
@@ -31,11 +30,11 @@ export default function BlogPage() {
 
           <div className="editorial-frame bg-white/90 p-4">
             <Image
-              alt="Rustige blogvisual met notities"
+              alt="Rustige tijdelijke blogvisual met notities en thema's"
               className="h-full min-h-[28rem] w-full rounded-[1.6rem] object-cover"
               height={860}
               priority
-              src="/images/session-notes.svg"
+              src="/images/blog-topics-placeholder.svg"
               width={1200}
             />
           </div>
@@ -43,60 +42,49 @@ export default function BlogPage() {
       </section>
 
       <section className="page-shell section-space">
-        <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[16rem_1fr]">
-          <aside className="lg:sticky lg:top-32 lg:self-start">
-            <p className="section-kicker">Artikelen</p>
-            <nav aria-label="Blog artikelen" className="mt-5 space-y-3">
-              {blogPosts.map((post) => (
-                <Link
-                  className="block rounded-2xl border border-ink-100 bg-white/70 px-4 py-4 text-sm leading-6 text-ink-700 hover:border-sage-300 hover:text-ink-900"
-                  href={`#${post.slug}`}
-                  key={post.slug}
-                >
-                  {post.title}
-                </Link>
-              ))}
-            </nav>
-          </aside>
+        <div className="mb-8 max-w-3xl">
+          <p className="section-kicker">Artikelen</p>
+          <h2 className="section-title mt-4 text-balance">
+            Eerste houvast bij thema's die vaak spelen.
+          </h2>
+          <p className="lede mt-5">
+            De artikelen zijn bedoeld als laagdrempelige start: herkenning,
+            taal voor wat er speelt en een eerste richting om verder te kijken.
+          </p>
+        </div>
 
-          <div className="space-y-16">
-            {blogPosts.map((post) => (
-              <article
-                className="border-b border-ink-100 pb-14 last:border-b-0"
-                id={post.slug}
-                key={post.slug}
-              >
-                <p className="eyebrow mb-4">{post.eyebrow}</p>
-                <h2 className="font-display text-4xl leading-tight text-ink-900 sm:text-5xl">
-                  {post.title}
-                </h2>
-                <p className="mt-4 text-sm text-ink-600">{post.readingTime}</p>
-                <p className="mt-6 text-xl leading-8 text-ink-700">
-                  {post.excerpt}
-                </p>
-                <div className="mt-8 space-y-6 text-lg leading-8 text-ink-700">
-                  {post.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {blogPosts.map((post) => (
+            <article
+              className="card-surface flex min-h-80 flex-col px-6 py-6 sm:px-7"
+              id={post.slug}
+              key={post.slug}
+            >
+              <p className="eyebrow mb-4">{post.eyebrow}</p>
+              <h2 className="font-display text-3xl leading-tight text-ink-900">
+                {post.title}
+              </h2>
+              <p className="mt-4 leading-7 text-ink-700">{post.excerpt}</p>
+              <p className="mt-auto pt-6 text-sm font-semibold text-sage-700">
+                {post.readingTime}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 
       <CtaBanner
-        description="Als je na het lezen wilt aftasten of coaching past, is een gratis kennismaking de meest logische eerste stap."
+        description="Misschien twijfel je nog. Dat is heel normaal. Neem gerust contact op."
         eyebrow="Na het lezen"
         primaryAction={{
-          href: siteConfig.ctas.booking,
-          label: "Plan een gratis kennismaking",
+          href: siteConfig.ctas.contact,
+          label: "Stel eerst een vraag",
         }}
         secondaryAction={{
           href: "/veiligheid-of-grenzen",
           label: "Lees over grenzen",
         }}
-        title="Meer lezen mag. Klein beginnen mag ook."
+        title="Heb je een vraag?"
       />
     </>
   );

@@ -43,7 +43,7 @@ export default function VoorWiePage() {
         <div className="mb-8 max-w-3xl">
           <p className="section-kicker">Waar je in kunt vastlopen</p>
           <h2 className="section-title mt-4 text-balance">
-            Herkenbaar in studie, werk of dagelijks leven.
+            Herken je dit?
           </h2>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -63,17 +63,17 @@ export default function VoorWiePage() {
           <article>
             <p className="section-kicker">Deze levensfase vraagt veel</p>
             <h2 className="section-title mt-4 text-balance">
-              Het is logisch dat het soms schuurt.
+              Het is normaal dat het soms lastig is.
             </h2>
             <p className="mt-5 max-w-prose text-lg leading-8 text-ink-700">
-              Studie, keuzes, prestatiedruk, sociale vergelijking en de eerste
-              jaren van werk kunnen veel onrust geven. Juist dan helpt het als
-              begeleiding praktisch, helder en niet te zwaar voelt.
+              Studie, keuzes, prestatiedruk en jezelf vergelijken met anderen
+              kunnen veel onrust geven. Juist dan helpt het als begeleiding
+              praktisch, helder en niet te zwaar voelt.
             </p>
           </article>
 
           <aside className="editorial-frame bg-white/90 px-6 py-6 sm:px-8">
-            <p className="eyebrow mb-4">Onderbouwing</p>
+            <p className="eyebrow mb-4">Je bent niet de enige</p>
             <div className="space-y-4">
               {supportSources.map((source) => (
                 <a
@@ -140,17 +140,17 @@ export default function VoorWiePage() {
       </section>
 
       <CtaBanner
-        description="Twijfel je? In een gratis kennismaking kijken we samen eerlijk of coaching nu passend is."
-        eyebrow="Eerste stap"
+        description="Misschien twijfel je nog. Dat is heel normaal. Neem gerust contact op."
+        eyebrow="Eerste vraag"
         primaryAction={{
-          href: siteConfig.ctas.booking,
-          label: "Plan een gratis kennismaking",
-        }}
-        secondaryAction={{
           href: siteConfig.ctas.contact,
           label: "Stel eerst een vraag",
         }}
-        title="Je hoeft niet zeker te weten of je hier precies goed zit."
+        secondaryAction={{
+          href: "/veiligheid-of-grenzen",
+          label: "Lees over grenzen",
+        }}
+        title="Heb je een vraag?"
       />
     </>
   );
