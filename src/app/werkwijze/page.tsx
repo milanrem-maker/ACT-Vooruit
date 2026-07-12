@@ -37,7 +37,7 @@ export default function WerkwijzePage() {
           </div>
           <div className="editorial-frame bg-white/90 p-4">
             <Image
-              alt="Tijdelijk proefbeeld van een rustig kennismakingsgesprek"
+              alt="Illustratie van een rustig kennismakingsgesprek"
               className="h-full min-h-[26rem] w-full rounded-[1.6rem] object-cover"
               height={860}
               priority
@@ -51,7 +51,7 @@ export default function WerkwijzePage() {
       <section className="page-shell pt-8">
         <div className="editorial-frame bg-white/90 p-4">
           <Image
-            alt="Tijdelijk proefbeeld van Milan in gesprek met iemand"
+            alt="Illustratie van een coachingsgesprek"
             className="aspect-[16/7] w-full rounded-[1.6rem] object-cover"
             height={700}
             src="/images/conversation-placeholder.svg"

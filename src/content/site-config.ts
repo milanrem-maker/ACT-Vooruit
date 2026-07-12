@@ -27,17 +27,17 @@ export const siteConfig = {
     "ACT-based coaching voor studenten en young professionals die vastlopen in piekeren, vermijden, keuzestress, onzekerheid of prestatiedruk. Geen therapie of diagnose, wel praktische begeleiding om overzicht te krijgen en stap voor stap weer in beweging te komen.",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.actvooruit.nl",
   locale: "nl_NL",
-  region: "Regio Nijmegen, fysiek op locatie",
+  region: "regio Nijmegen",
   responseTime: "meestal binnen 2 werkdagen",
   timezone: "Europe/Amsterdam",
   coach: {
     name: "Milan Rem",
-    title: "ACT coach",
+    title: "Coach en oprichter",
   },
   contact: {
     email: "milan.rem@gmail.com",
     phone: "",
-    location: "Nijmegen, fysiek op locatie",
+    location: "regio Nijmegen",
     responseTime: "meestal binnen 2 werkdagen",
   },
   ctas: {
@@ -53,36 +53,7 @@ export const siteConfig = {
     location: "Online kennismakingsgesprek",
     leadTime: "Je ontvangt daarna een bevestiging per mail.",
     availabilityNote:
-      "De gratis kennismaking is online. Vervolgsessies vinden fysiek op locatie plaats. Zolang de live agenda nog niet gekoppeld is, bevestig ik het gekozen moment nog per mail.",
-    slots: [
-      {
-        date: "Dinsdag 26 mei",
-        isoDate: "2026-05-26",
-        slots: [
-          { id: "2026-05-26T09:00", label: "09:00" },
-          { id: "2026-05-26T11:00", label: "11:00" },
-          { id: "2026-05-26T15:30", label: "15:30" },
-        ],
-      },
-      {
-        date: "Donderdag 28 mei",
-        isoDate: "2026-05-28",
-        slots: [
-          { id: "2026-05-28T10:00", label: "10:00" },
-          { id: "2026-05-28T13:30", label: "13:30" },
-          { id: "2026-05-28T16:00", label: "16:00" },
-        ],
-      },
-      {
-        date: "Maandag 1 juni",
-        isoDate: "2026-06-01",
-        slots: [
-          { id: "2026-06-01T09:30", label: "09:30" },
-          { id: "2026-06-01T12:00", label: "12:00" },
-          { id: "2026-06-01T17:00", label: "17:00" },
-        ],
-      },
-    ],
+      "Kies een beschikbaar moment. Na het plannen ontvang je een bevestiging per e-mail.",
   },
   navigation: [
     { href: "/voor-wie", label: "Voor wie" },
@@ -130,6 +101,11 @@ export const siteConfig = {
     "Geen therapie",
     "Fysieke sessies op locatie",
   ],
+  launch: {
+    status: "In voorbereiding",
+    description:
+      "ACT Vooruit wordt zorgvuldig voorbereid en is nog niet officieel gestart.",
+  },
   emergencyNotice:
     "Bij acute onveiligheid of crisis is coaching niet passend. Neem dan direct contact op met 112 of met je huisarts/huisartsenpost.",
 } as const;

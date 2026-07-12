@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { FormEvent } from "react";
 import { useRef, useState } from "react";
 
@@ -18,6 +19,7 @@ const fieldClassName =
 
 export function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
+  const [formStartedAt] = useState(() => Date.now());
   const [state, setState] = useState<ContactFormState>({
     status: "idle",
     message: "",
@@ -78,13 +80,17 @@ export function ContactForm() {
 
   return (
     <form className="space-y-5" onSubmit={handleSubmit} ref={formRef}>
+      <input name="formStartedAt" type="hidden" value={formStartedAt} />
+
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block text-sm font-medium text-ink-700">
           Naam
           <input
+            autoComplete="name"
             className={fieldClassName}
+            maxLength={80}
             name="name"
-            placeholder="Je voornaam en achternaam"
+            placeholder="Je naam"
             required
             type="text"
           />
@@ -93,7 +99,9 @@ export function ContactForm() {
         <label className="block text-sm font-medium text-ink-700">
           E-mailadres
           <input
+            autoComplete="email"
             className={fieldClassName}
+            maxLength={120}
             name="email"
             placeholder="naam@example.com"
             required
@@ -106,7 +114,9 @@ export function ContactForm() {
         <label className="block text-sm font-medium text-ink-700">
           Telefoonnummer (optioneel)
           <input
+            autoComplete="tel"
             className={fieldClassName}
+            maxLength={30}
             name="phone"
             placeholder="Alleen als je liever gebeld wordt"
             type="tel"
@@ -114,11 +124,9 @@ export function ContactForm() {
         </label>
 
         <label className="block text-sm font-medium text-ink-700">
-          Voorkeur dagdeel
+          Voorkeur dagdeel (optioneel)
           <select className={fieldClassName} defaultValue="" name="preferredDaypart">
-            <option disabled value="">
-              Kies wat ongeveer past
-            </option>
+            <option value="">Geen voorkeur</option>
             <option value="ochtend">Ochtend</option>
             <option value="middag">Middag</option>
             <option value="avond">Avond</option>
@@ -127,22 +135,40 @@ export function ContactForm() {
         </label>
       </div>
 
-      <label className="block text-sm font-medium text-ink-700">
-        Waar loop je op dit moment vooral in vast?
+      <div>
+        <label className="block text-sm font-medium text-ink-700" htmlFor="message">
+          Wat is je vraag?
+        </label>
+        <p className="mt-2 max-w-2xl text-sm leading-7 text-ink-600" id="message-help">
+          Beschrijf je vraag kort. Deel via dit formulier liever geen diagnoses,
+          medische gegevens, informatie over medicatie of een uitgebreid verhaal
+          over psychische klachten. Een paar zinnen zijn voldoende.
+        </p>
         <textarea
+          aria-describedby="message-help"
           className={`${fieldClassName} min-h-32 resize-y`}
+          id="message"
+          maxLength={1200}
           name="message"
-          placeholder="Bijvoorbeeld: piekeren, uitstellen, keuzestress of prestatiedruk. Een paar zinnen is genoeg."
+          placeholder="Een paar zinnen over je vraag is genoeg."
           required
         />
-      </label>
+      </div>
 
-      <div className="hidden" aria-hidden="true">
+      <div aria-hidden="true" className="hidden">
         <label>
           Website
           <input autoComplete="off" name="website" tabIndex={-1} type="text" />
         </label>
       </div>
+
+      <p className="text-sm leading-7 text-ink-600">
+        Lees hoe ACT Vooruit met je gegevens omgaat in de{" "}
+        <Link className="text-link" href="/privacy">
+          privacyverklaring
+        </Link>
+        .
+      </p>
 
       <div className="flex flex-wrap items-center gap-4">
         <button
@@ -155,18 +181,19 @@ export function ContactForm() {
             : "Verstuur bericht"}
         </button>
         <p className="text-sm leading-7 text-ink-600">
-          Twijfel je nog? Dat is normaal. Juist daarvoor is een kennismaking
-          bedoeld.
+          Een kort bericht is genoeg. Je hoeft nog niets te beslissen.
         </p>
       </div>
 
       {state.message ? (
         <p
+          aria-live="polite"
           className={`rounded-2xl px-4 py-4 text-sm leading-7 ${
             state.status === "error"
               ? "bg-clay-100/70 text-clay-700"
               : "bg-sage-100/70 text-sage-700"
           }`}
+          role={state.status === "error" ? "alert" : "status"}
         >
           {state.message}
         </p>

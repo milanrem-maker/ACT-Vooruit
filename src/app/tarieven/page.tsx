@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Tarieven | ACT coaching betaalbaar voor studenten",
   description:
-    "Bekijk de tarieven voor ACT coaching bij ACT Vooruit: gratis online kennismaking, intake, losse sessies, studententarief en zakelijke opties op aanvraag.",
+    "Bekijk de tarieven voor ACT coaching bij ACT Vooruit: gratis online kennismaking, intake, losse sessies, studententarief en zakelijk aanbod op aanvraag.",
   path: "/tarieven",
 });
 
@@ -22,7 +22,7 @@ const startOptions = [
   },
   {
     title: "Vervolg",
-    text: "Losse sessies of een trajectvorm, afhankelijk van wat past.",
+    text: "Je betaalt voorlopig per losse sessie en bepaalt steeds wat past.",
   },
 ];
 
@@ -134,10 +134,15 @@ export default function TarievenPage() {
           </article>
 
           <article className="editorial-frame bg-white/90 px-6 py-7 sm:px-8">
-            <p className="eyebrow mb-4">Traject-opbouw</p>
+            <p className="eyebrow mb-4">Mogelijke trajectopbouw</p>
             <h2 className="font-display text-4xl leading-tight text-ink-900">
-              Als je voor een traject kiest.
+              Een indicatie, geen verplicht pakket.
             </h2>
+            <p className="mt-4 leading-8 text-ink-700">
+              Deze acht sessies laten zien hoe een langer traject eruit kan
+              zien. Je betaalt voorlopig per intake of losse sessie en legt dit
+              niet vooraf als pakket vast.
+            </p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {programSteps.map((step) => (
                 <div className="rounded-2xl bg-sand-50 px-4 py-4" key={step.label}>

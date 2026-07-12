@@ -1,4 +1,3 @@
-import { BookingForm } from "@/components/booking-form";
 import { CalBookingEmbed } from "@/components/cal-booking-embed";
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
@@ -19,10 +18,7 @@ export const metadata = createMetadata({
 
 export default function GratisKennismakingPage() {
   const hero = pageHeroes.kennismaking;
-  const hasCalBooking = Boolean(siteConfig.booking.calComUrl);
-  const availabilityNote = hasCalBooking
-    ? "De gratis kennismaking is online. Vervolgsessies vinden fysiek op locatie plaats. Cal.com blokkeert tijden die al bezet zijn in je gekoppelde agenda."
-    : siteConfig.booking.availabilityNote;
+  const availabilityNote = siteConfig.booking.availabilityNote;
 
   return (
     <>
@@ -83,23 +79,49 @@ export default function GratisKennismakingPage() {
         </div>
       </section>
 
-      {hasCalBooking ? (
-        <CalBookingEmbed
-          availabilityNote={availabilityNote}
-          calUrl={siteConfig.booking.calComUrl}
-          duration={siteConfig.booking.duration}
-          location={siteConfig.booking.location}
-          sessionLabel={siteConfig.booking.sessionLabel}
-        />
-      ) : (
-        <BookingForm
-          availabilityNote={availabilityNote}
-          duration={siteConfig.booking.duration}
-          location={siteConfig.booking.location}
-          sessionLabel={siteConfig.booking.sessionLabel}
-          slots={siteConfig.booking.slots}
-        />
-      )}
+      <CalBookingEmbed
+        availabilityNote={availabilityNote}
+        calUrl={siteConfig.booking.calComUrl}
+        duration={siteConfig.booking.duration}
+        location={siteConfig.booking.location}
+        sessionLabel={siteConfig.booking.sessionLabel}
+      />
+
+      <section className="page-shell pb-16 sm:pb-20">
+        <div className="section-panel mx-auto grid max-w-5xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <article className="section-card">
+            <p className="eyebrow mb-4">Na het gesprek</p>
+            <h2 className="font-display text-4xl leading-tight text-ink-900">
+              Wat gebeurt er na de kennismaking?
+            </h2>
+            <p className="mt-5 leading-8 text-ink-700">
+              Na de kennismaking hoef je niet meteen te beslissen. Als we
+              allebei denken dat coaching past en jij verder wilt, ontvang je
+              een korte opvolgmail. Daarin staat hoe je een intake kunt
+              aanvragen en welke informatie daarvoor nodig is. Daarna plannen
+              we pas de intake.
+            </p>
+          </article>
+
+          <aside className="section-card">
+            <p className="eyebrow mb-4">Goed om te weten</p>
+            <ul className="space-y-3 leading-7 text-ink-700">
+              <li className="rounded-2xl bg-sand-50 px-4 py-4">
+                De kennismaking is geen volledige coachsessie.
+              </li>
+              <li className="rounded-2xl bg-white px-4 py-4">
+                Je hoeft vooraf geen uitgebreid verhaal in te vullen.
+              </li>
+              <li className="rounded-2xl bg-sand-50 px-4 py-4">
+                Je hoeft tijdens het gesprek niet direct te beslissen.
+              </li>
+              <li className="rounded-2xl bg-white px-4 py-4">
+                De kennismaking is niet bedoeld voor crisis- of spoedvragen.
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
 
       <CtaBanner
         description="Misschien twijfel je nog. Dat is heel normaal. Neem gerust contact op."
@@ -115,7 +137,7 @@ export default function GratisKennismakingPage() {
         size="large"
         title="Heb je een vraag?"
         visual={{
-          alt: "Tijdelijk proefbeeld van Milan achter een laptop in een online kennismaking",
+          alt: "Illustratie van een online kennismakingsgesprek",
           src: "/images/consult-call-placeholder.svg",
         }}
       />

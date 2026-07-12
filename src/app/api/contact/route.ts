@@ -5,14 +5,25 @@ import { siteConfig } from "@/content/site-config";
 type ContactPayload = {
   name?: unknown;
   email?: unknown;
-  topic?: unknown;
+  phone?: unknown;
+  preferredDaypart?: unknown;
   message?: unknown;
-  preferredContact?: unknown;
+  formStartedAt?: unknown;
   website?: unknown;
 };
 
+const allowedDayparts = new Set([
+  "",
+  "ochtend",
+  "middag",
+  "avond",
+  "maakt-niet-uit",
+]);
+
 function sanitizeText(value: unknown, maxLength: number) {
-  return typeof value === "string" ? value.trim().slice(0, maxLength) : "";
+  return typeof value === "string"
+    ? value.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "").trim().slice(0, maxLength)
+    : "";
 }
 
 function isValidEmail(value: string) {
@@ -22,17 +33,17 @@ function isValidEmail(value: string) {
 function buildMailtoUrl(payload: {
   name: string;
   email: string;
-  topic: string;
+  phone: string;
+  preferredDaypart: string;
   message: string;
-  preferredContact: string;
 }) {
-  const subject = `Aanvraag via website: ${payload.topic || "contact"}`;
+  const subject = "Vraag via de website van ACT Vooruit";
   const body = [
     `Naam: ${payload.name}`,
     `E-mail: ${payload.email}`,
-    `Onderwerp: ${payload.topic}`,
-    payload.preferredContact
-      ? `Voorkeur voor contact: ${payload.preferredContact}`
+    payload.phone ? `Telefoonnummer: ${payload.phone}` : "",
+    payload.preferredDaypart
+      ? `Voorkeur dagdeel: ${payload.preferredDaypart}`
       : "",
     "",
     payload.message,
@@ -46,6 +57,15 @@ function buildMailtoUrl(payload: {
 }
 
 export async function POST(request: Request) {
+  const contentLength = Number(request.headers.get("content-length") ?? 0);
+
+  if (contentLength > 12_000) {
+    return NextResponse.json(
+      { message: "Je bericht is te lang. Houd het bij een paar zinnen." },
+      { status: 413 },
+    );
+  }
+
   const body = (await request.json().catch(() => null)) as ContactPayload | null;
 
   if (!body) {
@@ -56,25 +76,34 @@ export async function POST(request: Request) {
   }
 
   const name = sanitizeText(body.name, 80);
-  const email = sanitizeText(body.email, 120);
-  const topic = sanitizeText(body.topic, 80);
-  const message = sanitizeText(body.message, 2000);
-  const preferredContact = sanitizeText(body.preferredContact, 120);
+  const email = sanitizeText(body.email, 120).toLowerCase();
+  const phone = sanitizeText(body.phone, 30);
+  const preferredDaypart = sanitizeText(body.preferredDaypart, 30);
+  const message = sanitizeText(body.message, 1200);
   const honeypot = sanitizeText(body.website, 80);
+  const formStartedAt = Number(body.formStartedAt);
+  const submittedTooQuickly =
+    Number.isFinite(formStartedAt) && Date.now() - formStartedAt < 1_500;
 
-  if (honeypot) {
-    return NextResponse.json(
-      { message: "Versturen lukt op dit moment niet." },
-      { status: 400 },
-    );
+  if (honeypot || submittedTooQuickly) {
+    return NextResponse.json({
+      message: "Je bericht is ontvangen.",
+    });
   }
 
   if (!name || !email || !message || !isValidEmail(email)) {
     return NextResponse.json(
       {
         message:
-          "Vul je naam, een geldig e-mailadres en een korte omschrijving in.",
+          "Vul je naam, een geldig e-mailadres en een korte vraag in.",
       },
+      { status: 400 },
+    );
+  }
+
+  if (!allowedDayparts.has(preferredDaypart)) {
+    return NextResponse.json(
+      { message: "Kies een geldige voorkeur voor het dagdeel." },
       { status: 400 },
     );
   }
@@ -96,9 +125,9 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         name,
         email,
-        topic,
+        phone,
+        preferredDaypart,
         message,
-        preferredContact,
         source: "act-vooruit-website",
       }),
     }).catch(() => null);
@@ -121,13 +150,13 @@ export async function POST(request: Request) {
 
   return NextResponse.json({
     message:
-      "Je e-mailapp wordt geopend zodat je bericht direct verstuurd kan worden.",
+      "Je e-mailapp wordt geopend zodat je het bericht zelf kunt versturen.",
     mailtoUrl: buildMailtoUrl({
       name,
       email,
-      topic: topic || "websitevraag",
+      phone,
+      preferredDaypart,
       message,
-      preferredContact,
     }),
   });
 }

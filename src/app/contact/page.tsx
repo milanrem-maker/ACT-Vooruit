@@ -84,7 +84,7 @@ export default function ContactPage() {
                     {siteConfig.contact.email}
                   </a>
                 </li>
-                <li>Regio: {siteConfig.region}</li>
+                <li>Locatie: {siteConfig.region}</li>
                 <li>Reactietijd: {siteConfig.contact.responseTime}</li>
               </ul>
               <div className="mt-6">

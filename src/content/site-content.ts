@@ -46,15 +46,6 @@ export type HomeVisual = {
   href: string;
 };
 
-export type BlogPost = {
-  slug: string;
-  title: string;
-  eyebrow: string;
-  excerpt: string;
-  readingTime: string;
-  paragraphs: string[];
-};
-
 export type SourceLink = {
   title: string;
   href: string;
@@ -117,7 +108,7 @@ export const pageHeroes: Record<string, HeroContent> = {
       "Gratis online kennismaking",
       "Studententarief beschikbaar",
       "Losse sessies mogelijk",
-      "Zakelijk op aanvraag",
+      "Zakelijk aanbod op aanvraag",
     ],
   },
   overMij: {
@@ -163,13 +154,13 @@ export const pageHeroes: Record<string, HeroContent> = {
     eyebrow: "Gratis kennismaking",
     title: "Plan een gratis kennismaking",
     description:
-      "Een kort en vrijblijvend gesprek om te kijken of coaching past. Ook als je nog twijfelt, ben je welkom.",
+      "Een kort en vrijblijvend gesprek om te kijken of coaching later kan passen. ACT Vooruit is nog in voorbereiding en je hoeft niets zeker te weten.",
     asideTitle: "In het kort",
     asideItems: [
       "Online",
-      "20 tot 30 minuten",
+      "25 minuten",
       "Vrijblijvend",
-      "Geen diagnose nodig",
+      "ACT Vooruit is in voorbereiding",
     ],
   },
   veiligheid: {
@@ -265,7 +256,7 @@ export const painPoints = [
 
 export const whatActIs = [
   "Je herkent wat je in de weg zit: piekeren, vermijden, uitstellen of perfectionisme.",
-  "Je leert omgaan met lastige gevoelens en gedachtes, zodat je meer rust ervaart in je dagelijks leven.",
+  "Je leert omgaan met lastige gevoelens en gedachten, zodat je meer rust ervaart in je dagelijks leven.",
   "Je zet kleine stappen richting wat jij belangrijk vindt in studie, werk of dagelijks leven.",
 ];
 
@@ -322,7 +313,7 @@ export const supportSources: SourceLink[] = [
     title: "Jongeren ervaren vaak stress",
     href: "https://www.rivm.nl/gezondheidsonderzoek-covid-19/kwartaalonderzoek-jongeren/resultaten-eerdere-metingen/meting-15-mentale-gezondheid",
     description:
-      "Veel jongeren en jongvolwassenen voelen zich vaak gestrest. Je bent dus niet de enige als je merkt dat druk, twijfel of onrust veel ruimte innemen.",
+      "Veel studenten en young professionals voelen zich vaak gestrest. Je bent dus niet de enige als je merkt dat druk, twijfel of onrust veel ruimte innemen.",
   },
 ];
 
@@ -344,7 +335,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: "1",
     title: "Gratis kennismaking",
-    duration: "20 tot 30 minuten",
+    duration: "25 minuten",
     description:
       "Een eerste online gesprek om te verkennen waar je in vastloopt, wat je zoekt en of ACT Vooruit daarbij past.",
     expectation:
@@ -362,7 +353,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: "3",
     title: "Sessies",
-    duration: "45 tot 60 minuten per sessie",
+    duration: "60 minuten per sessie",
     description:
       "Je werkt aan inzicht, omgaan met lastige gedachten en gevoelens, en stappen richting wat belangrijk voor je is.",
     expectation:
@@ -393,7 +384,7 @@ export const actPrinciples = [
   {
     title: "Stappen richting wat belangrijk is",
     description:
-      "Wat zijn jouw doelen en waarden.",
+      "Wat zijn jouw doelen en waarden?",
   },
 ];
 
@@ -455,7 +446,7 @@ export const pricingItems: PricingItem[] = [
     ],
   },
   {
-    name: "Zakelijk",
+    name: "Zakelijk aanbod op aanvraag",
     price: "Op aanvraag",
     duration: "Afhankelijk van vraag",
     description:
@@ -469,10 +460,10 @@ export const pricingItems: PricingItem[] = [
 ];
 
 export const pricingNotes = [
-  "ACT Vooruit wil betaalbare hulp bieden voor studenten en jongvolwassenen die net zijn gestart met werken.",
-  "Daarom is ACT Vooruit ingericht als een betaalbare en laagdrempelige eerste stap voor studenten en jongvolwassenen die net zijn gestart met werken.",
+  "ACT Vooruit wil betaalbare hulp bieden voor studenten en young professionals.",
+  "Daarom is ACT Vooruit ingericht als een betaalbare en laagdrempelige eerste stap voor studenten en young professionals die studeren of net zijn gestart met werken.",
   "Je begint klein: eerst een gratis online kennismaking, daarna pas een mogelijke intake.",
-  "Je hoeft niet meteen een heel traject te kopen om te kunnen starten.",
+  "Je betaalt voorlopig per intake of losse sessie en hoeft geen trajectpakket te kopen.",
 ];
 
 export const aboutIntro = [
@@ -483,10 +474,30 @@ export const aboutIntro = [
 export const aboutStory = [
   "Ik herken hoe het kan zijn als piekeren, vermijden, druk, angstgevoelens, stress, paniek of somberheid veel ruimte innemen. Niet als mooi verhaal achteraf, maar als iets dat in het dagelijks leven heel concreet kan doorwerken.",
   "ACT, voluit Acceptance and Commitment Therapy, heeft mij veel geholpen. Niet omdat moeilijke gedachten of gevoelens ineens verdwijnen, maar omdat je anders kunt leren reageren op lastige situaties, gevoelens en gedachten.",
-  "Daarnaast heb ik cursussen gevolgd in ACT en coaching en was ik actief als studentencoach aan de HAN in Nijmegen. Daar begeleidde ik studenten die vastliepen in stress, prestatiedruk, onzekerheid, uitstelgedrag en mentale overbelasting.",
-  "Ook middelengebruik mag bespreekbaar zijn. Onder studenten en jonge professionals wordt gebruik soms genormaliseerd of weinig besproken, terwijl het wel invloed kan hebben op hoe je je voelt en functioneert. Ik kijk daar niet moraliserend naar, maar wel eerlijk en zorgvuldig.",
+  "Ook middelengebruik mag bespreekbaar zijn. Onder studenten en young professionals wordt gebruik soms genormaliseerd of weinig besproken, terwijl het wel invloed kan hebben op hoe je je voelt en functioneert. Ik kijk daar niet moraliserend naar, maar wel eerlijk en zorgvuldig.",
   "Ik zie mezelf als sparringspartner. Ik help je om samen jouw oplossingen te vinden.",
 ];
+
+export const educationAndExperience = [
+  {
+    title: "ACT-cursus",
+    status: "In opleiding",
+    description:
+      "Ik volg momenteel een ACT-cursus bij ACT in Actie - Cursus & Opleiding. Ik wil deze cursus afronden voordat ACT Vooruit daadwerkelijk van start gaat.",
+  },
+  {
+    title: "Studentcoaching aan de HAN",
+    status: "Ervaring tijdens mijn minor",
+    description:
+      "Tijdens mijn minor aan de HAN begeleidde ik als studentcoach twee studenten met een concrete coachvraag. Daarbij deed ik ervaring op met gesprekken over studie, prestatiedruk, onzekerheid, uitstelgedrag en mentale belasting.",
+  },
+  {
+    title: "Blijven reflecteren",
+    status: "Voornemen bij de start",
+    description:
+      "Bij de start van mijn praktijk wil ik reflectie, intervisie en waar passend supervisie een vaste plek geven. Ik vind het belangrijk om alleen opleidingen en ervaring te vermelden die ik daadwerkelijk heb gevolgd of opgebouwd.",
+  },
+] as const;
 
 export const aboutValues = [
   {
@@ -625,7 +636,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Is er een wachtlijst?",
     answer:
-      "Dat hangt af van de actuele beschikbaarheid. Via de kennismakingsagenda zie je welke momenten openstaan.",
+      "ACT Vooruit is nog in voorbereiding. Zodra de praktijk start, staat de actuele beschikbaarheid in de kennismakingsagenda.",
   },
   {
     question: "Past dit bij mijn levensfase?",
@@ -665,106 +676,6 @@ export const faqItems: FaqItem[] = [
   {
     question: "Hoe snel kan ik starten?",
     answer:
-      "Dat begint met de gratis kennismaking. Daarna kijken we samen wat haalbaar en passend is qua tempo.",
-  },
-];
-
-export const blogPosts: BlogPost[] = [
-  {
-    slug: "piekeren-waarom-je-hoofd-moeilijk-stil-wordt",
-    eyebrow: "Piekeren",
-    title: "Piekeren: waarom je hoofd zo moeilijk stil wordt",
-    excerpt:
-      "Piekeren voelt vaak alsof je iets aan het oplossen bent, maar ondertussen raak je verder vast in je hoofd. Dit artikel geeft eerste houvast om te begrijpen waarom je blijft malen.",
-    readingTime: "4 min leestijd",
-    paragraphs: [
-      "Piekeren kan tijdelijk voelen als controle zoeken. Je blijft nadenken, vergelijken en scenario's doorlopen, maar je hoofd krijgt weinig rust.",
-      "In ACT coaching onderzoeken we niet hoe je gedachten weg krijgt, maar hoe je er anders op kunt reageren.",
-    ],
-  },
-  {
-    slug: "uitstellen-en-vermijden",
-    eyebrow: "Vermijding",
-    title: "Uitstellen en vermijden: waarom het even oplucht, maar je toch vast laat lopen",
-    excerpt:
-      "Uitstellen is niet altijd luiheid. Vaak geeft vermijden even lucht, terwijl de druk daarna juist groter wordt.",
-    readingTime: "5 min leestijd",
-    paragraphs: [
-      "Uitstellen lijkt aan de buitenkant vaak simpel: je doet iets niet, terwijl je weet dat het moet. Van binnen is het meestal ingewikkelder. Een opdracht, keuze of gesprek kan spanning oproepen, en uitstellen geeft dan tijdelijk verlichting.",
-      "Het lastige is dat die verlichting kort duurt. Daarna komt vaak schuldgevoel, meer druk en nog meer twijfel. Daardoor wordt het patroon sterker, ook als je rationeel precies weet wat handig zou zijn.",
-      "In coaching onderzoeken we niet alleen wat je uitstelt, maar ook wat je probeert te vermijden.",
-    ],
-  },
-  {
-    slug: "prestatiedruk-en-vergelijken",
-    eyebrow: "Prestatiedruk",
-    title: "Prestatiedruk en jezelf vergelijken met anderen",
-    excerpt:
-      "Studie, stage, werk en sociale media kunnen het gevoel geven dat je steeds achterloopt. Je leest hoe vergelijken druk kan vergroten en wat een eerste stap kan zijn.",
-    readingTime: "4 min leestijd",
-    paragraphs: [
-      "Prestatiedruk gaat niet alleen over hard werken. Het gaat ook over de voortdurende gedachte dat het beter, sneller of overtuigender moet.",
-      "Een praktische eerste stap is herkennen welke norm je steeds probeert te halen en of die echt van jou is.",
-    ],
-  },
-  {
-    slug: "stress-angstgevoelens-en-somberheid",
-    eyebrow: "Eerste stap",
-    title: "Stress, angstgevoelens en somberheid: wanneer het tijd is voor een eerste stap",
-    excerpt:
-      "Je hoeft niet precies te weten hoe erg iets is om een vraag te mogen stellen. Soms begint hulp zoeken met merken dat je niet zo wilt blijven doorgaan.",
-    readingTime: "4 min leestijd",
-    paragraphs: [
-      "Stress, angstgevoelens en somberheid kunnen klein beginnen en toch veel invloed krijgen op je dag. Denk aan minder rust, minder contact of steeds meer vermijden.",
-      "Coaching is geen behandeling, maar kan wel een laagdrempelige eerste stap zijn als je vraag concreet en veilig genoeg is.",
-    ],
-  },
-  {
-    slug: "wat-act-is-zonder-ingewikkelde-taal",
-    eyebrow: "ACT",
-    title: "Wat ACT is, zonder ingewikkelde taal",
-    excerpt:
-      "ACT helpt je niet om alles wat lastig is uit te schakelen. Het helpt je oefenen met anders reageren, zodat je stap voor stap meer richting kunt kiezen.",
-    readingTime: "3 min leestijd",
-    paragraphs: [
-      "ACT staat voor Acceptance and Commitment Therapy. Binnen ACT Vooruit gebruik ik ACT als praktische basis voor coaching.",
-      "We kijken naar gedachten, gevoelens, gedrag en waarden, maar steeds gekoppeld aan gewone situaties uit je dagelijks leven.",
-    ],
-  },
-  {
-    slug: "hulp-zoeken-zonder-therapie",
-    eyebrow: "Twijfel",
-    title: "Hulp zoeken zonder dat het meteen therapie hoeft te zijn",
-    excerpt:
-      "Veel mensen twijfelen of hun vraag wel groot genoeg is. Dit artikel helpt je begrijpen wanneer een praktische eerste stap logisch kan zijn.",
-    readingTime: "4 min leestijd",
-    paragraphs: [
-      "Je hoeft geen diagnose te hebben om te merken dat je vastloopt. Soms zoek je vooral iemand die helpt ordenen, oefenen en eerlijk meekijkt.",
-      "Als coaching niet passend is, is dat ook waardevolle informatie. Dan kijken we welke hulp logischer is.",
-    ],
-  },
-  {
-    slug: "middelengebruik-onder-studenten-en-jonge-professionals",
-    eyebrow: "Middelengebruik",
-    title: "Middelengebruik onder studenten en jonge professionals: wanneer iets normaals toch in de weg gaat zitten",
-    excerpt:
-      "Middelengebruik kan in sommige omgevingen heel normaal voelen. Tegelijk kan het invloed hebben op slaap, stemming, keuzes en hoe je met stress omgaat.",
-    readingTime: "5 min leestijd",
-    paragraphs: [
-      "Middelengebruik wordt niet altijd besproken, juist omdat het sociaal of normaal lijkt. Toch kan het effect hebben op hoe je functioneert.",
-      "Binnen coaching mag dit onderwerp zonder oordeel op tafel komen, zeker als je merkt dat het in de weg gaat zitten.",
-    ],
-  },
-  {
-    slug: "meer-rust-in-je-hoofd",
-    eyebrow: "Dagelijks leven",
-    title: "Meer rust in je hoofd: kleine stappen die je dagelijks leven echt helpen",
-    excerpt:
-      "Meer rust ontstaat vaak niet door één grote oplossing, maar door kleine stappen die je herhaalt. Denk aan anders omgaan met piekeren, plannen en spanning.",
-    readingTime: "4 min leestijd",
-    paragraphs: [
-      "Rust in je hoofd gaat niet over nooit meer spanning voelen. Het gaat over anders omgaan met wat er opkomt.",
-      "Kleine stappen kunnen helpen om weer grip, overzicht en beweging te ervaren in je dagelijks leven.",
-    ],
+      "ACT Vooruit is nog niet officieel gestart. Zodra de praktijk opent, begint dit met een gratis kennismaking en kijken we daarna wat haalbaar en passend is.",
   },
 ];

@@ -7,6 +7,7 @@ import {
   aboutIntro,
   aboutStory,
   aboutValues,
+  educationAndExperience,
   pageHeroes,
 } from "@/content/site-content";
 import { siteConfig } from "@/content/site-config";
@@ -95,6 +96,28 @@ export default function OverMijPage() {
             ))}
           </div>
         </article>
+      </section>
+
+      <section className="page-shell pb-16 sm:pb-20">
+        <div className="section-panel mx-auto max-w-5xl">
+          <p className="section-kicker">Transparant over mijn basis</p>
+          <h2 className="section-title mt-4 text-balance">
+            Opleiding en ervaring
+          </h2>
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            {educationAndExperience.map((item) => (
+              <article className="section-card" key={item.title}>
+                <p className="eyebrow mb-3">{item.status}</p>
+                <h3 className="font-display text-3xl leading-tight text-ink-900">
+                  {item.title}
+                </h3>
+                <p className="mt-4 leading-8 text-ink-700">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="page-shell pb-16 sm:pb-20">

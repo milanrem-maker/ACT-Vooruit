@@ -25,6 +25,10 @@ export function SiteFooter() {
             Geen therapie of diagnose. Wel praktische begeleiding, met een
             gratis online kennismaking als eerste stap.
           </p>
+          <p className="mt-4 rounded-2xl bg-sand-50 px-4 py-3 text-sm leading-7 text-ink-700">
+            <strong>{siteConfig.launch.status}:</strong>{" "}
+            {siteConfig.launch.description}
+          </p>
         </div>
 
         <div>
@@ -48,7 +52,7 @@ export function SiteFooter() {
                 {siteConfig.contact.email}
               </a>
             </li>
-            <li>{siteConfig.region}</li>
+            <li>Locatie: {siteConfig.region}</li>
             <li>Reactietijd: {siteConfig.contact.responseTime}</li>
           </ul>
           {socials.length ? (

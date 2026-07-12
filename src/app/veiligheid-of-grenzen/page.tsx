@@ -43,7 +43,7 @@ export default function VeiligheidPage() {
       <section className="page-shell pt-8 sm:pt-10">
         <div className="editorial-frame bg-white/90 p-4">
           <Image
-            alt="Tijdelijk proefbeeld van een rustig gesprek waarin zorgvuldig wordt afgestemd"
+            alt="Illustratie van een rustig gesprek waarin zorgvuldig wordt afgestemd"
             className="aspect-[16/7] w-full rounded-[1.6rem] object-cover"
             height={700}
             priority

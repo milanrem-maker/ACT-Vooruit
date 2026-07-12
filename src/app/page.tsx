@@ -15,7 +15,7 @@ export const metadata = createMetadata({
 const trustItems = [
   "gratis kennismaking",
   "online",
-  "20-30 minuten",
+  "25 minuten",
   "vrijblijvend",
   "geen diagnose nodig",
 ];
@@ -42,7 +42,8 @@ export default function HomePage() {
             </h1>
             <p className="lede mt-6 max-w-prosewide">
               ACT Vooruit is een praktische eerste stap voor studenten en young
-              professionals die blijven hangen in onrust, vermijding of
+              professionals die blijven hangen in onrust, vermijding,
+              somberheid, angstgevoelens, perfectionisme of
               prestatiedruk. Geen therapie, maar heldere begeleiding om weer in
               beweging te komen.
             </p>
@@ -107,7 +108,7 @@ export default function HomePage() {
           <div>
             <p className="section-kicker">Voor wie</p>
             <h2 className="section-title mt-4 text-balance">
-              Voor studenten en professionals die vastlopen.
+              Voor studenten en young professionals die vastlopen.
             </h2>
             <p className="mt-5 max-w-prose text-lg leading-8 text-ink-700">
               ACT Vooruit is er voor mensen die merken dat piekeren, vermijden,

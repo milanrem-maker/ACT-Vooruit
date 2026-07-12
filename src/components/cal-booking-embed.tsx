@@ -1,3 +1,8 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+
 type CalBookingEmbedProps = {
   availabilityNote: string;
   calUrl: string;
@@ -53,21 +58,21 @@ export function CalBookingEmbed({
   location,
   sessionLabel,
 }: CalBookingEmbedProps) {
+  const [showCalendar, setShowCalendar] = useState(false);
   const directCalUrl = normalizeCalUrl(calUrl);
   const embedUrl = buildEmbedUrl(calUrl);
 
   return (
     <section className="page-shell pb-16 sm:pb-20" id="boeken">
-      <div className="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-        <aside className="card-surface px-6 py-6 sm:px-8">
+      <div className="section-panel grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+        <aside className="section-card">
           <p className="eyebrow mb-4">Plan je kennismaking</p>
           <h2 className="font-display text-4xl leading-tight text-ink-900">
-            Kies direct een moment in de agenda.
+            Kies een moment dat voor jou past.
           </h2>
           <p className="mt-5 text-lg leading-8 text-ink-700">
-            De kennismaking is online en vrijblijvend. Cal.com houdt rekening
-            met de gekoppelde agenda, zodat bezette momenten niet gekozen kunnen
-            worden.
+            Kies hieronder een beschikbaar moment. Na het plannen ontvang je
+            een bevestiging per e-mail.
           </p>
 
           <dl className="mt-8 space-y-4">
@@ -103,40 +108,61 @@ export function CalBookingEmbed({
 
           {directCalUrl ? (
             <a
-              className="mt-5 inline-flex min-h-12 items-center justify-center rounded-full bg-clay-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-clay-500/20 hover:-translate-y-0.5 hover:bg-clay-700"
+              className="mt-5 inline-flex min-h-12 items-center justify-center rounded-full border border-ink-100 bg-white/80 px-5 py-3 text-sm font-semibold text-ink-900 hover:-translate-y-0.5 hover:border-sage-300 hover:bg-white"
               href={directCalUrl}
               rel="noreferrer"
               target="_blank"
             >
-              Open in Cal.com
+              Open de agenda in een nieuw venster
             </a>
           ) : null}
         </aside>
 
         <div className="card-surface overflow-hidden px-3 py-3 sm:px-4 sm:py-4">
           {embedUrl ? (
-            <div className="relative min-h-[760px] overflow-hidden rounded-[1.5rem] bg-white">
-              <iframe
-                allow="camera; microphone; fullscreen; display-capture"
-                aria-label="Cal.com agenda voor gratis kennismaking"
-                className="absolute inset-0 h-full w-full border-0"
-                loading="lazy"
-                src={embedUrl}
-                title="Gratis kennismaking boeken via Cal.com"
-              />
-            </div>
+            showCalendar ? (
+              <div className="relative min-h-[760px] overflow-hidden rounded-[1.5rem] bg-white">
+                <iframe
+                  allow="camera; microphone; fullscreen; display-capture"
+                  aria-label="Agenda voor een gratis kennismaking"
+                  className="absolute inset-0 h-full w-full border-0"
+                  src={embedUrl}
+                  title="Gratis kennismaking plannen"
+                />
+              </div>
+            ) : (
+              <div className="flex min-h-[34rem] flex-col items-center justify-center rounded-[1.5rem] bg-sand-50 px-6 py-10 text-center">
+                <p className="eyebrow mb-4">Beschikbare momenten</p>
+                <h3 className="max-w-xl font-display text-4xl leading-tight text-ink-900">
+                  Laad de agenda wanneer je klaar bent om te kijken.
+                </h3>
+                <p className="mt-5 max-w-xl leading-8 text-ink-700">
+                  De agenda wordt aangeboden door Cal.com. Pas na je keuze
+                  wordt deze externe inhoud geladen en kunnen technische
+                  gegevens met Cal.com worden gedeeld. Lees meer in de{" "}
+                  <Link className="text-link" href="/privacy">
+                    privacyverklaring
+                  </Link>
+                  .
+                </p>
+                <button
+                  className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-clay-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-clay-500/20 hover:-translate-y-0.5 hover:bg-clay-700"
+                  onClick={() => setShowCalendar(true)}
+                  type="button"
+                >
+                  Toon beschikbare momenten
+                </button>
+              </div>
+            )
           ) : (
             <div className="rounded-[1.5rem] bg-sand-50 px-6 py-8">
-              <p className="eyebrow mb-3">Nog niet gekoppeld</p>
+              <p className="eyebrow mb-3">Agenda niet beschikbaar</p>
               <h3 className="font-display text-3xl leading-tight text-ink-900">
-                Voeg je Cal.com-link toe om live tijden te tonen.
+                Stuur gerust eerst een bericht.
               </h3>
               <p className="mt-4 leading-8 text-ink-700">
-                Zet je event-link in{" "}
-                <code className="rounded-md bg-white px-2 py-1 text-sm">
-                  NEXT_PUBLIC_CAL_BOOKING_URL
-                </code>
-                . Daarna verschijnt hier automatisch je Cal.com agenda.
+                De online agenda kan nu niet worden getoond. Via de
+                contactpagina kun je wel een korte vraag stellen.
               </p>
             </div>
           )}

@@ -93,6 +93,58 @@ summary::-webkit-details-marker {
   .section-kicker {
     @apply text-sm font-semibold uppercase tracking-[0.18em] text-sage-700;
   }
+
+  .section-panel {
+    @apply rounded-[2rem] border border-white/70 bg-white/45 p-4 shadow-soft sm:p-6;
+  }
+
+  .section-card {
+    @apply rounded-[1.5rem] border border-ink-100/70 bg-white/85 px-5 py-6;
+  }
+
+  .interactive-card {
+    @apply hover:-translate-y-1 hover:border-sage-300 hover:bg-white hover:shadow-lg;
+  }
+
+  .text-link {
+    @apply text-sage-700 underline decoration-sage-300 underline-offset-4 hover:text-clay-700;
+  }
+
+  .article-header {
+    @apply rounded-[2rem] border border-white/70 bg-white/65 px-6 py-9 shadow-soft sm:px-10 sm:py-12;
+  }
+
+  .article-body {
+    @apply text-lg leading-8 text-ink-700;
+  }
+
+  .article-section + .article-section {
+    @apply mt-10;
+  }
+
+  .article-section h2 {
+    @apply mb-5 font-display text-3xl leading-tight text-ink-900 sm:text-4xl;
+  }
+
+  .article-section p + p {
+    @apply mt-5;
+  }
+
+  .privacy-section + .privacy-section {
+    @apply mt-12 border-t border-ink-100 pt-10;
+  }
+
+  .privacy-section h2 {
+    @apply font-display text-3xl leading-tight text-ink-900 sm:text-4xl;
+  }
+
+  .privacy-section > p {
+    @apply mt-5;
+  }
+
+  .privacy-section > ul {
+    @apply mt-5 list-disc space-y-3 pl-6;
+  }
 }
 
 @layer utilities {
