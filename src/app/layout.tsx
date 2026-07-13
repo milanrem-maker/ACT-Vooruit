@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body className="min-h-screen font-sans text-ink-900 antialiased">
-        <div className="relative isolate overflow-hidden">
+        <div className="relative isolate overflow-x-clip">
           <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-page-wash opacity-90" />
           <div className="absolute left-[-8rem] top-24 -z-10 h-64 w-64 rounded-full bg-clay-100/70 blur-3xl" />
           <div className="absolute right-[-10rem] top-48 -z-10 h-72 w-72 rounded-full bg-sage-100/70 blur-3xl" />
