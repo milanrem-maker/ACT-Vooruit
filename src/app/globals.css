@@ -19,6 +19,7 @@ body {
 }
 
 @media (max-width: 1279px) {
+  html:has(header details[open]),
   body:has(header details[open]) {
     overflow: hidden;
   }
