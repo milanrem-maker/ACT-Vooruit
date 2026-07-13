@@ -39,7 +39,7 @@ export function SiteHeader() {
 
             <nav
               aria-label="Mobiele hoofdnavigatie"
-              className="mt-4 border-t border-ink-100/80 pt-3"
+              className="mt-4 max-h-[calc(100dvh-6rem)] overflow-y-auto border-t border-ink-100/80 pt-3"
             >
               <div className="grid gap-1">
                 {siteConfig.navigation.map((item) => (
