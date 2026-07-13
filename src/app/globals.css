@@ -18,6 +18,12 @@ body {
     linear-gradient(180deg, #fbf7f1 0%, #f4ebdf 100%);
 }
 
+@media (max-width: 1279px) {
+  body:has(header details[open]) {
+    overflow: hidden;
+  }
+}
+
 body::before {
   content: "";
   position: fixed;
