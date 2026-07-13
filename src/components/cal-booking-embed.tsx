@@ -106,66 +106,75 @@ export function CalBookingEmbed({
             {availabilityNote}
           </p>
 
-          {directCalUrl ? (
-            <a
-              className="mt-5 inline-flex min-h-12 items-center justify-center rounded-full border border-ink-100 bg-white/80 px-5 py-3 text-sm font-semibold text-ink-900 hover:-translate-y-0.5 hover:border-sage-300 hover:bg-white"
-              href={directCalUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              Open de agenda in een nieuw venster
-            </a>
-          ) : null}
         </aside>
 
-        <div className="card-surface overflow-hidden px-3 py-3 sm:px-4 sm:py-4">
-          {embedUrl ? (
-            showCalendar ? (
-              <div className="relative min-h-[760px] overflow-hidden rounded-[1.5rem] bg-white">
-                <iframe
-                  allow="camera; microphone; fullscreen; display-capture"
-                  aria-label="Agenda voor een gratis kennismaking"
-                  className="absolute inset-0 h-full w-full border-0"
-                  src={embedUrl}
-                  title="Gratis kennismaking plannen"
-                />
-              </div>
+        <div>
+          <div className="card-surface overflow-hidden px-3 py-3 sm:px-4 sm:py-4">
+            {embedUrl ? (
+              showCalendar ? (
+                <div className="relative min-h-[760px] overflow-hidden rounded-[1.5rem] bg-white">
+                  <iframe
+                    allow="camera; microphone; fullscreen; display-capture"
+                    aria-label="Agenda voor een gratis kennismaking"
+                    className="absolute inset-0 h-full w-full border-0"
+                    src={embedUrl}
+                    title="Gratis kennismaking plannen"
+                  />
+                </div>
+              ) : (
+                <div className="flex min-h-[34rem] flex-col items-center justify-center rounded-[1.5rem] bg-sand-50 px-6 py-10 text-center">
+                  <p className="eyebrow mb-4">Beschikbare momenten</p>
+                  <h3 className="max-w-xl font-display text-4xl leading-tight text-ink-900">
+                    Bekijk wanneer er plek is voor een kennismaking.
+                  </h3>
+                  <p className="mt-5 max-w-xl leading-8 text-ink-700">
+                    De agenda wordt aangeboden door Cal.com. Pas wanneer je de
+                    agenda opent, wordt deze externe inhoud geladen en kunnen
+                    technische gegevens met Cal.com worden gedeeld. Lees meer
+                    in de{" "}
+                    <Link className="text-link" href="/privacy">
+                      privacyverklaring
+                    </Link>
+                    .
+                  </p>
+                  <button
+                    className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-clay-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-clay-500/20 hover:-translate-y-0.5 hover:bg-clay-700"
+                    onClick={() => setShowCalendar(true)}
+                    type="button"
+                  >
+                    Bekijk beschikbare momenten
+                  </button>
+                </div>
+              )
             ) : (
-              <div className="flex min-h-[34rem] flex-col items-center justify-center rounded-[1.5rem] bg-sand-50 px-6 py-10 text-center">
-                <p className="eyebrow mb-4">Beschikbare momenten</p>
-                <h3 className="max-w-xl font-display text-4xl leading-tight text-ink-900">
-                  Laad de agenda wanneer je klaar bent om te kijken.
+              <div className="rounded-[1.5rem] bg-sand-50 px-6 py-8">
+                <p className="eyebrow mb-3">Agenda niet beschikbaar</p>
+                <h3 className="font-display text-3xl leading-tight text-ink-900">
+                  Stuur gerust eerst een bericht.
                 </h3>
-                <p className="mt-5 max-w-xl leading-8 text-ink-700">
-                  De agenda wordt aangeboden door Cal.com. Pas na je keuze
-                  wordt deze externe inhoud geladen en kunnen technische
-                  gegevens met Cal.com worden gedeeld. Lees meer in de{" "}
-                  <Link className="text-link" href="/privacy">
-                    privacyverklaring
-                  </Link>
-                  .
+                <p className="mt-4 leading-8 text-ink-700">
+                  De online agenda kan nu niet worden getoond. Via de
+                  contactpagina kun je wel een korte vraag stellen.
                 </p>
-                <button
-                  className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-clay-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-clay-500/20 hover:-translate-y-0.5 hover:bg-clay-700"
-                  onClick={() => setShowCalendar(true)}
-                  type="button"
-                >
-                  Toon beschikbare momenten
-                </button>
               </div>
-            )
-          ) : (
-            <div className="rounded-[1.5rem] bg-sand-50 px-6 py-8">
-              <p className="eyebrow mb-3">Agenda niet beschikbaar</p>
-              <h3 className="font-display text-3xl leading-tight text-ink-900">
-                Stuur gerust eerst een bericht.
-              </h3>
-              <p className="mt-4 leading-8 text-ink-700">
-                De online agenda kan nu niet worden getoond. Via de
-                contactpagina kun je wel een korte vraag stellen.
+            )}
+          </div>
+
+          {directCalUrl ? (
+            <div className="mt-4 flex flex-col items-start gap-3 rounded-[1.5rem] border border-ink-100/70 bg-white/55 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm leading-6 text-ink-700">
+                Werkt de agenda hierboven niet goed?
               </p>
+              <a
+                className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border border-ink-100 bg-white/85 px-5 py-2.5 text-sm font-semibold text-ink-900 hover:-translate-y-0.5 hover:border-sage-300 hover:bg-white"
+                href={directCalUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Open Cal.com in een nieuw venster
+              </a>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </section>
