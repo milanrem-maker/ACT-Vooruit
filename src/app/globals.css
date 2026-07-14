@@ -19,6 +19,14 @@ body {
 }
 
 @media (max-width: 1279px) {
+  .site-header {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+  }
+
   body:has(header details[open]) {
     overflow: hidden;
   }
